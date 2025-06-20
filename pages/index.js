@@ -15,6 +15,7 @@ const Testimonial = lazy(() => import('../components/home/Testimonial'))
 export default function Home() {
   return (
     <>
+ 
     {/* <Welcome/> */}
       {/* <Countdown />
       <Clinicinfo></Clinicinfo>
