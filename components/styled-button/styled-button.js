@@ -64,7 +64,7 @@ const StyledButtonRoot = styled('button', {
     // variants
     ...(variant !== 'contained' && {
         backgroundColor: 'transparent',
-        boxShadow: 'none !important',
+        boxShadow: 'none',
     }),
     // colors & varians
     ...(color === 'default' &&

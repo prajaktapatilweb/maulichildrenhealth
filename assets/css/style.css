@@ -117,7 +117,7 @@ section {
 .contact .info-box {
   color: #444444;
   text-align: center;
-  padding: 20px 0 30px 0;
+  padding: 20px 0 20px 0;
   background-color: #ffffff;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
             rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
@@ -126,9 +126,7 @@ section {
 
 .contact .info-box .bx {
   color: #92664f; /* Icon color */
-  border-radius: 50%; /* Circular border */
   padding: 7px; /* Padding inside the border */
-  border: 3px dotted #e9e0db; /* Dotted border */
   display: inline-block; /* Ensure the element respects the box model */
   width: 40px; /* Optional: Set fixed width to fit the circle */
   height: 40px; /* Optional: Set fixed height to fit the circle */
@@ -453,4 +451,26 @@ section {
 
 /* end parallox section */
 
+  .star-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
+    .star-list li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 12px;
+       
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .star-list li::before {
+        content: '⭐';
+        position: absolute;
+        left: 0;
+        top: 0;
+     
+        color: #f4b400; /* Golden star color */
+    }

@@ -1,10 +1,14 @@
-import React from 'react'
-import Home from '../components/home/Maulichildren/Home'
+import { MainLayout } from '../components/layout';
+import Whatwedo from '../components/home/Maulichildren/Whatwedo';
+import Mauliheader from '../components/header/Mauliheader';
 
-export default function maulichildrenhospital() {
+export default function Home() {
   return (
-    <div>
-        <Home></Home>
-    </div>
+    <>
+ 
+<Whatwedo/>
+    </>
   )
 }
+Home.getLayout = (page) => <MainLayout>{page}</MainLayout>;
+

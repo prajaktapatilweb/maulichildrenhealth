@@ -5,7 +5,6 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
 import { Grid, Hidden, Link, Container } from "@mui/material";
-import Image from "next/image";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import CallTwoToneIcon from "@mui/icons-material/CallTwoTone";
@@ -51,19 +50,60 @@ function ResponsiveAppBar() {
         <AppBar
             position="static"
             sx={{
-                backgroundImage: { xs: `linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.4)), url("/images/nashikclinic/clinics9.webp")`, sm: `linear-gradient(rgba(1, 1, 1, 0.2), rgba(256, 256, 256, 0.2)), url("/images/nashikclinic/clinics9.webp")`, md:`linear-gradient(to right, rgba(1,1,1, 0.6) 10%, rgba(1,1,1, 0.4) 90%), url('/images/headerback1.jpg')`},
+                backgroundColor:'#fdf5f2',
+                // backgroundImage: { xs: `linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.4)), url("/images/nashikclinic/clinics9.webp")`, sm: `linear-gradient(rgba(1, 1, 1, 0.2), rgba(256, 256, 256, 0.2)), url("/images/nashikclinic/clinics9.webp")`, md:`linear-gradient(to right, rgba(1,1,1, 0.6) 10%, rgba(1,1,1, 0.4) 90%), url('/images/headerback1.jpg')`},
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundPosition:'center',
-
+                position: 'relative', // Important for absolute positioning inside
+                // height: { xs: '300px', md: '500px' }, // Example height
+                overflow: 'hidden', // Optional to prevent icons from overflowing
+            
             }}
         >
+              {/* Floating Icon 1 */}
+              <Box
+                component="img"
+                src="/images/icons/abc.png"
+                alt="Icon 1"
+                sx={{
+                    position: 'absolute',
+                    top: '20%',
+                    left: '10%',
+                    width: { xs: 30, md: 50 },
+                    height: 'auto',
+                }}
+            />
+
+            {/* Floating Icon 2 */}
+            <Box
+                component="img"
+                src="/images/icons/abc.png"
+                alt="Icon 2"
+                sx={{
+                    position: 'absolute',
+                    bottom: '15%',
+                    right: '20%',
+                    width: { xs: 30, md: 50 },
+                    height: 'auto',
+                }}
+            />
+
+            {/* You can add more icons like this */}
+
+            {/* Your actual content here */}
+            <Box sx={{ position: 'relative', zIndex: 1, }}>
             <section style={{
-                background: '#3a302e', width: '100%', padding: 0, borderRadius: 0,
+                 width: '100%', padding: 0, borderRadius: 0,
+                 boxShadow: ' 0 2px 2px 1px #0000001f',
+                 backdropFilter: 'blur( 8px )',
+                 borderBottom: '1px solid #ffffff36',
+                 
             }}>
                 <Container maxWidth="xl">
                     <Box
                         sx={{
+                            
                             display: "flex",
                             flexDirection: "column",
                             "@media (min-width: 768px)": {
@@ -81,31 +121,30 @@ function ResponsiveAppBar() {
                                     },
                                 }}
                             >
-                                <IconButton aria-label="phone" style={{ color: 'white' }}>
+                                <IconButton aria-label="phone">
                                     {" "}
-                                    <CallTwoToneIcon />
+                                    <CallTwoToneIcon sx={{color:'#fc6c93'}} />
                                 </IconButton>
 
                                 <Link href={`tel:${contactno1}`} target="_blank">
-                                    <a className="nav-link-inner--text" style={{ color: 'white', marginRight: 10 }}>
+                                    <a className="nav-link-inner--text" style={{marginRight: 10 }}>
                                     9890840340
-
                                     </a>
                                 </Link>
 
 
                                 {/* <Link  href={`tel:${contactno2}`} target="_blank">
-                                    <a className="nav-link-inner--text" style={{ color: 'white' }}>
+                                    <a className="nav-link-inner--text">
                                     9923708233
 
                                     </a>
                                 </Link>{" "} */}
-                                <IconButton aria-label="email" style={{ color: 'white' }}>
-                                    <EmailTwoToneIcon />{" "}
+                                <IconButton aria-label="email">
+                                    <EmailTwoToneIcon sx={{color:'#fc6c93'}} />{" "}
                                 </IconButton>
                                 <Link
                                     href={`mailto:${'shape32aligners@gmail.com'}`} target="_blank">
-                                    <a className="nav-link-inner--text" style={{ color: 'white' }}>
+                                    <a className="nav-link-inner--text">
                                     shape32aligners@gmail.com
 
                                     </a>
@@ -134,7 +173,7 @@ function ResponsiveAppBar() {
                                     rel="noreferrer"
                                     aria-label="facebook"
                                 >
-                                    <FacebookIcon sx={{ color: "white" }} />{" "}
+                                    <FacebookIcon />{" "}
                                 </a>
                             </IconButton>
 
@@ -146,7 +185,7 @@ function ResponsiveAppBar() {
                                     aria-label="instagram"
                                 >
                                     <InstagramIcon
-                                        sx={{ color: "white", Width: 30, Height: 30 }}
+                                        sx={{  Width: 30, Height: 30 }}
                                     ></InstagramIcon>
                                 </a>
                             </IconButton>
@@ -158,7 +197,7 @@ function ResponsiveAppBar() {
                                     rel="noreferrer"
                                     aria-label="youtube"
                                 >
-                                    <YouTubeIcon sx={{ color: "white" }}></YouTubeIcon>
+                                    <YouTubeIcon></YouTubeIcon>
                                 </a>
                             </IconButton>
                             {/* <IconButton aria-label="justdial">
@@ -194,10 +233,8 @@ function ResponsiveAppBar() {
 
             <section style={{
                 padding: 3,
-                background: 'rgba( 255, 255, 255, 1)',
-                boxShadow: ' 0 10px 10px 1px #0000001f',
-                backdropFilter: 'blur( 8px )',
-                borderBottom: '1px solid #ffffff36',
+                // background: 'rgba( 255, 255, 255, 1)',
+              
                 display: 'flex'
             }}>
                 <Navbar />
@@ -220,7 +257,7 @@ function ResponsiveAppBar() {
                                 fontSize: { xs: '32px', sm: '30px', md: '38px' },
                                 letterSpacing: 1.5,
 
-                                color: { xs: 'white', sm: 'white', md: "white" },
+                                color: { xs: 'white', sm: 'white', md: "primary.main" },
                                 lineHeight: 1.2,
 mb:-2,
                                 // '-webkit-text-stroke': '1px #28282B',
@@ -236,7 +273,7 @@ mb:-2,
                             <Hidden smDown>
                                 <Typography
                                     variant="p"
-                                    sx={{ color: "white", lineHeight: 0, fontSize: 23, lineHeight: 1.2, }}
+                                    sx={{  lineHeight: 0, fontSize: 23, lineHeight: 1.2,color:'primary.light' }}
                                 >
                                  Trust Dr. Sagar Dombe for bespoke dental treatments in Thergaon, Pune.
 
@@ -250,24 +287,30 @@ mb:-2,
                                     offset={0}
                                     duration={350}
                                 >
-                                    <StyledButton
-                                        color="white"
-                                        size="large"
-                                        variant="outlined"
-                                        sx={{
-                                            mb: { xs: 3, sm: 0, md: 0 },
-                                            fontSize: 22,
+           <StyledButton
+    color="white"
+    size="large"
+    variant="outlined"
+    sx={{
+        mb: { xs: 3, sm: 0, md: 0 },
+        fontSize: 20,
+        borderRadius: 2,
+        backgroundColor: '#4559b3',
+        color: 'white',
+        fontWeight:700,
+        boxShadow: 'rgba(0, 0, 0, 0.1) 0px -5px 0px 0px inset !important', // Force override
+        transition: 'all 0.3s ease',
+        '&:hover': {
+            backgroundColor: '#3a4ba1',
+            boxShadow: '0 12px 24px rgba(0, 0, 0, 0.8) !important',
+            transform: 'translateY(-3px)',
+        },
+    }}
+>
+    Enquire Now
+</StyledButton>
 
-                                            borderRadius: 10,
-                                            backgroundColor: 'white',
-                                            fontWeight:600,
-                                         
 
-                                            color: "#795442",
-                                        }}
-                                    >
-                                        Enquire Now
-                                    </StyledButton>
                                 </ScrollLink>
                             </Box>
                         </motion.div>
@@ -276,6 +319,7 @@ mb:-2,
                     </Grid>
                 </Grid>
                 {/* </Container> */}
+            </Box>
             </Box>
         </AppBar>
     );

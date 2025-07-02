@@ -7,7 +7,7 @@ import { StyledButton } from "../styled-button";
 import PropTypes from "prop-types";
 import Link from "next/link";
 
-const HeroSection = ({ title, description, buttonText, bgImage, gradient,  }) => {
+const HeroSection = ({ title, description, buttonText,link, bgImage, gradient,  }) => {
   return (
     <Grid
       item
@@ -82,7 +82,7 @@ const HeroSection = ({ title, description, buttonText, bgImage, gradient,  }) =>
     alignItems: 'center',
   }}
 >
-                <Link href='/maulichildrenhospital' passHref legacyBehavior>
+                <Link href={link} passHref legacyBehavior>
                   <a target="_blank" rel="noopener noreferrer">
                     <StyledButton
                       variant="outlined"
@@ -98,7 +98,6 @@ const HeroSection = ({ title, description, buttonText, bgImage, gradient,  }) =>
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        
                         whiteSpace: "nowrap",
                         gap: 1.5,
                         minWidth: "fit-content",

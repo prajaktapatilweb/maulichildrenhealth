@@ -78,8 +78,7 @@ const Clinicinfo = () => {
 
     }}
 >
-Welcome to Dr. Dombe's Dental Clinic
-
+Smiles for Kids & Beyond
 </Typography>
 <Typography
     component="h1"
@@ -91,7 +90,7 @@ Welcome to Dr. Dombe's Dental Clinic
 
     }}
 >
-Exceptional care and innovative solutions for your dental needs.
+Gentle pediatric dentistry and complete family dental care.
 
 </Typography>
 
@@ -104,14 +103,13 @@ Exceptional care and innovative solutions for your dental needs.
                
               }}
             >
-             Dr. Dombe's Dental Clinic in Thergaon, Pune, is dedicated to providing exceptional dental care with a focus on patient comfort and satisfaction. Founded by Dr. Sagar R. Dombe, a distinguished orthodontist with extensive experience, the clinic offers a wide range of services, including aligners, braces, implants, full mouth rehabilitation (FMR), and digital smile design (DSD). 
-
-              <br /><br/>
-              As India’s first in-house aligner manufacturer, the clinic has been utilizing advanced digital technology since 2017 to provide high-quality orthodontic solutions. Under Dr. Dombe's expert guidance, a recognized international speaker on aligner therapy and a key opinion leader for 3Shape, patients receive exceptional care tailored to their specific needs.
-
-              <br /><br/>
-             <b> In-House Aligner Manufacturing: </b>Offers affordable Aligner treatment options compared to other clinics.
-
+<b>Aesthetic Dental Clinic</b> in Kalamboli is dedicated to creating a positive, gentle, and comfortable dental experience for children and families alike. Led by <b>Dr. Sunita Taware, BDS, MDS – Paedodontist </b>, the clinic combines deep expertise in pediatric dentistry with a reassuring, child-friendly approach helping even the most anxious little ones feel relaxed.
+     <br /><br/>
+We focus on <b>preventive, restorative, and aesthetic care for kids,</b> including cavity prevention, fluoride applications, pit & fissure sealants, pediatric root canals, space maintainers, and interceptive orthodontics. Every visit aims to build trust and lifelong healthy habits.
+     <br /><br/>
+Beyond pediatric care, we also <b>offer a full spectrum of advanced dental services for adults and seniors,</b> such as dental implants, smile designing, fixed orthodontics, prosthetic rehabilitation, gum surgeries, root canal treatments, wisdom tooth removal, ultrasonic cleaning, tobacco habit counselling, and digital dental X-rays.
+     <br /><br/>
+With modern technology, evidence-based treatment plans, and open communication with parents and patients, Aesthetic Dental Clinic ensures every smile from the first tooth to adulthood, receives the care it truly deserves.
 
             </Typography>
           </motion.div>

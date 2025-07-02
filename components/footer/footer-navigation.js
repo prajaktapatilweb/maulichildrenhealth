@@ -41,7 +41,7 @@ const NavigationItem = ({ label, path }) => {
   </Link>);
 };
 const FooterNavigation = () => {
-  return (<Grid container spacing={2}>
+  return (<Grid container spacing={2} sx={{backgroundColor:'black'}}>
     <Grid item xs={12} md={4}>
       <FooterSectionTitle title="Course" />
       {courseMenu.map(({ label, path }, index) => (<NavigationItem key={index + path} label={label} path={/* path */'#'} />))}

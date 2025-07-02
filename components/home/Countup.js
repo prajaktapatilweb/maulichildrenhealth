@@ -56,7 +56,7 @@ const fadeUpVariants = {
 
     return (
         <div>
-            <Box>
+            <Box sx={{mx:2,zIndex:1,position:'relative'}}>
            <motion.div
   className="textcontainer"
   variants={fadeUpVariants}
@@ -65,8 +65,18 @@ const fadeUpVariants = {
   viewport={{ once: true }} // Optionally only animate once
 >
 
-            <Container>
-<hr style={{border: 0, height: '1px', backgroundColor: '#E5E4E2'}} ></hr>
+            <Container sx={{
+                width:'100%',
+                backgroundColor: 'white',  py:{xs:2,sm:2,md:2},
+                mt: -15, borderRadius: {xs:5,sm:3,md:50}, 
+                boxShadow:
+                'rgba(100, 50, 93, 0.25) 0px 50px 60px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 1px -2px 3px 1px inset',
+              
+                '&:hover': {
+                   
+                    transition: 'box-shadow 0.3s ease',
+                },
+            }}>
 
                 <Grid container spacing={0} alignItems='center' justifyContent='center' textAlign='center' sx={{pt:5,pb:7}}>
                 {Details.map((item, i) => ( 

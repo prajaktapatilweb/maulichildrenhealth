@@ -231,7 +231,7 @@ export default function Navbar(props) {
                                                     <Button
                                                         key={page.label}
                                                         onClick={handleCloseNavMenu}
-                                                        sx={{ mx: 1, color: "#28282B", display: "block",textTransform:'initial',fontSize:'16px',letterSpacing:1 }}>
+                                                        sx={{ mx: 1, color: "#323663", display: "block",textTransform:'initial',fontSize:'16px',letterSpacing:1 }}>
                                                         {page.label}
                                                     </Button>
                                                 </Link>

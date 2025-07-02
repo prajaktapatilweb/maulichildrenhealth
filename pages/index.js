@@ -1,38 +1,36 @@
-import { Suspense, lazy } from "react";
-const Photogallery = lazy(() => import('../components/home/photo-gallery'))
-import { MainLayout } from '../components/layout';
-import Equipment from '../components/home/Equipment';
-import Dentalservices from '../components/home/Dentalservices';
-import Contact from '../components/home/Contact';
-import Countdown from "../components/home/Countdown";
-import Clinicinfo from "../components/home/Clinicinfo";
-import Associates from "../components/home/Associates";
-import Countup from "../components/home/Countup";
-import DrDombe from "../components/home/DrAkshay";
-import Welcome from "../components/home/Welcome";
-const Testimonial = lazy(() => import('../components/home/Testimonial'))
+import { AppBar, Grid } from '@mui/material';
+import HeroSection from '../components/home/HeroSection';
+
 
 export default function Home() {
   return (
     <>
- 
-    {/* <Welcome/> */}
-      {/* <Countdown />
-      <Clinicinfo></Clinicinfo>
-      <Countup></Countup>
-      <Dentalservices/>
-      <DrDombe></DrDombe>
-      <Suspense fallback=
-        {<div>Component are loading please wait...</div>}>
-        <Photogallery />
-        {/* <Awar
-        <Testimonial></Testimonial>
-      </Suspense>
-      <Equipment />
-     <Associates/>
-      <Contact></Contact>  */}
+    <AppBar
+    position="static"
+    sx={{ backgroundColor: "transparent", boxShadow: "none" }}
+  >
+    <Grid container sx={{ height: "100vh" }}>
+      <HeroSection
+        title="Expert Dental Care for All Ages"
+        description="Trust Dr. Sagar Dombe for bespoke dental treatments in Thergaon, Pune."
+        buttonText="Let’s Perfect Your Smile"
+        link='/astheticdental'
+        bgImage="/images/headerback1.jpg"
+        gradient="to right, rgba(179, 129, 90, 0.6), rgba(210, 162, 125, 0.6)"
+      />
+  
+      <HeroSection
+        title="Caring for Your Little Ones"
+        description="Compassionate pediatric care for infants, toddlers, and kids."
+        buttonText="Let’s Nurture Their Health"
+         link='/maulichildrenhospital'
+        bgImage="/images/headerback3.jpg"
+        gradient="to right, rgba(30,144,255, 0.6), rgba(30,144,255, 0.6)"
+      />
+    </Grid>
+  </AppBar>
+  
     </>
   )
 }
-Home.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 

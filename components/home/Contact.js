@@ -1,5 +1,4 @@
-import React from 'react';
-import { Typography, Card, Link } from '@mui/material';
+import {  Card, Link } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Axios from 'axios';
@@ -15,6 +14,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Heading from './Heading';
 import { headList8 } from '../constants/titlefile';
 import { motion } from "framer-motion";
+import { contactdetails } from '../constants/contactdetails';
 
 
 
@@ -42,7 +42,6 @@ const validationSchema = yup.object({
 });
 
 const Contact = () => {
-  const contactno1 = "9890840340";
   const router = useRouter();
 
   const onSubmit = async (values, submitProps) => {
@@ -67,8 +66,8 @@ const Contact = () => {
 
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 100 },  // Initial state: invisible and below the viewport
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,  // Moves up to its original position
       transition: {
         duration: 0.8, // Duration of the animation
@@ -78,167 +77,110 @@ const Contact = () => {
   };
 
   return (
-    <Box id='contactform' sx={{ backgroundColor: 'white'}}>
-      
+    <Box id='contactform' sx={{ backgroundColor: 'white' }}>
+
       <section id="contact" class="contact"
-  style={{
-    position: "relative",
-    background: "linear-gradient(to right, rgb(233, 224, 219), rgb(233, 224, 219))",
-    overflow: "hidden",
-    paddingTop: "150px", // Ensures content stays below the wave
-    paddingBottom: "50px",
-  }}
->
-  {/* Wave Section */}
-  <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "150px" }}>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
-      preserveAspectRatio="none"
-      style={{
-        display: "block",
-        width: "100%",
-        height: "100%",
-        transform: "rotate(180deg)", // Flips the wave to the top
-      }}
-    >
-      <path
-        fill="#ffffff"
-        fillOpacity="1"
-        d="M0,224L60,213.3C120,203,240,181,360,186.7C480,192,600,224,720,213.3C840,203,960,149,1080,122.7C1200,96,1320,96,1380,96L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-      ></path>
-    </svg>
-  </div>
-      
-  <Container>
-<Heading data={headList8}/>
-<br/>
- <motion.div
-      className="textcontainer"
-      variants={fadeUpVariants}
-      initial="hidden"         // Start in the hidden state
-      whileInView="visible"    // Animate to the visible state when in view
-      viewport={{ once: true }} // Optionally only animate once
-    >
-          <Grid container spacing={2} alignItems='center' justifyContent='center'>
-            <Grid item xs={12} md={6}>
-              <Grid container spacing={2}>
-                <Grid item xs={12} md={12}>
-                <div class="info-box mt-4">  
-                  <LocationOnIcon className='bx'/>
-                    <h3 style={{fontSize:'18px'}}>Our Location</h3>
-                    <p>101, 102, 103 & 106, Sadguru Sai Paradise, Rahatani-Link Road,<br></br> Thergaon, Pimpri-Chinchwad, Pune, Maharashtra 411033
-                    </p>
-                  </div>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                  <div class="info-box mt-4">
-                    <EmailTwoToneIcon className='bx'></EmailTwoToneIcon>
-                    <h3>Working Hours</h3>
-                    <p> Monday to Saturday: 10 am - 8 pm<br/>
-                    Sunday - Closed
-                    </p>
-                    
+        style={{
+          position: "relative",
+          background: "linear-gradient(to right, rgb(233, 224, 219), rgb(233, 224, 219))",
+          overflow: "hidden",
+          paddingTop: "150px", // Ensures content stays below the wave
+          paddingBottom: "50px",
+        }}
+      >
+        {/* Wave Section */}
+        <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "150px" }}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            preserveAspectRatio="none"
+            style={{
+              display: "block",
+              width: "100%",
+              height: "100%",
+              transform: "rotate(180deg)", // Flips the wave to the top
+            }}
+          >
+            <path
+              fill="#ffffff"
+              fillOpacity="1"
+              d="M0,224L60,213.3C120,203,240,181,360,186.7C480,192,600,224,720,213.3C840,203,960,149,1080,122.7C1200,96,1320,96,1380,96L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
 
+        <Container>
+          <Heading data={headList8} />
+          <br />
+          <motion.div
+            className="textcontainer"
+            variants={fadeUpVariants}
+            initial="hidden"         // Start in the hidden state
+            whileInView="visible"    // Animate to the visible state when in view
+            viewport={{ once: true }} // Optionally only animate once
+          >
+            <Grid container spacing={2} alignItems='center' justifyContent='center'  >
+              <Grid item xs={12} md={6}>
 
-                  </div>
+                <Grid container spacing={2}>
+                  <Grid item xs={12} md={12}>
+
+                    <div class="info-box mt-4" style={{ paddingTop: 38, paddingBottom: 38 }}>
+
+                      <div style={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center' }}>
+                        <LocationOnIcon className='bx' />
+                        <h3>Our Location</h3>
+                      </div>
+                      <p style={{ marginTop: 0 }}>{contactdetails.address}</p><br></br>
+                      <div style={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center' }}>
+                        <EmailTwoToneIcon className='bx'></EmailTwoToneIcon>
+                        <h3>Working Hours</h3>
+                      </div>
+                      <p style={{ marginTop: 0 }}> Monday to Saturday: 10:00 AM–09:30 PM<br />
+                        Sunday - By Appointment
+                      </p>
+                      <br></br>
+
+                      <div style={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center' }}>
+                        <CallTwoToneIcon className='bx' />
+
+                        <h3>Contact Us</h3>
+                      </div>
+                      <Link href={`tel:${contactdetails.phone}`} target="_blank" sx={{ color: 'primary.dark', mt: 0 }}>+{contactdetails.phone}</Link>
+                      <br />
+                      <Link href={`tel:${contactdetails.phone1}`} target="_blank" sx={{ color: 'primary.dark', mt: 0 }}>+{contactdetails.phone1}</Link>
+<br></br>
+                      <Link href={`mailto:${contactdetails.email}`} target="_blank" sx={{ color: 'primary.dark' }}>{contactdetails.email}</Link>
+                    </div>
+
+                  </Grid>
+
                 </Grid>
-                <Grid item xs={12} md={6}>
-                <div class="info-box mt-4"> 
-                      <CallTwoToneIcon   className='bx' />
-                  
-                    <h3>Contact Us</h3>
-                    <Link href={`tel:${contactno1}`} target="_blank" sx={{color:'primary.dark'}}>+919890840340</Link>
-                    <br/>
-                    <Link href={`mailto:${'shape32aligners@gmail.com'}`} target="_blank" sx={{color:'primary.dark'}}>shape32aligners@gmail.com</Link>
-                  </div>
-                </Grid>
+
               </Grid>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Card sx={{ px: 3, py: 4,boxShadow: 'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset'  }}>
-                <Formik
-                  validateOnChange={true}
-                  initialValues={{
-                    name: '',
-                    email: '',
-                    mobilenumber: '',
-                    msg: '',
-                    selection: '',
-                    recaptcha: ''
-                  }}
-                  validationSchema={validationSchema}
-                  onSubmit={onSubmit}
-                >
-                  {({ isSubmitting }) => (
-                    <Form style={{ textAlign: 'left' }}>
-                      <Grid container spacing={2}>
-                        <Grid item xs={12} md={6}>
-                          <AppTextField
-                            placeholder='name'
-                            name='name'
-                            label='Name'
-                            sx={{
-                              width: '100%',
-                              '& .MuiInputBase-input': {
-                                fontSize: 14,
-                              },
-                            }}
-                            variant='outlined'
-                          />
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                          <AppTextField
-                            placeholder='Email'
-                            name='email'
-                            label='Email ID'
-                            sx={{
-                              width: '100%',
-                              '& .MuiInputBase-input': {
-                                fontSize: 14,
-                              },
-                            }}
-                            variant='outlined'
-                          />
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                          <AppTextField
-                            placeholder='Mobile Number'
-                            name='mobilenumber'
-                            label='Mobile Number'
-                            sx={{
-                              width: '100%',
-                              '& .MuiInputBase-input': {
-                                fontSize: 14,
-                              },
-                            }}
-                            variant='outlined'
-                          />
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                          <FormControl
-                            sx={{
-                              width: '100%',
-                              '&.MuiInputBase-input': { fontSize: 14 },
-                            }}
-                          >
-                            <InputLabel id='demo-simple-select-label'>
-                              Select your interest
-                            </InputLabel>
-                            <Field
-                              name='selection'
-                              as='select'
-                              options={All}
-                              component={CustomizedSelectFormik}
-                            ></Field>
-                          </FormControl>
-                        </Grid>
-                        <Grid item xs={12} >
-                          <Box>
+              <Grid item xs={12} md={6}>
+                <Card sx={{ px: 3, py: 4, boxShadow: 'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset' }}>
+                  <Formik
+                    validateOnChange={true}
+                    initialValues={{
+                      name: '',
+                      email: '',
+                      mobilenumber: '',
+                      msg: '',
+                      selection: '',
+                      recaptcha: ''
+                    }}
+                    validationSchema={validationSchema}
+                    onSubmit={onSubmit}
+                  >
+                    {({ isSubmitting }) => (
+                      <Form style={{ textAlign: 'left' }}>
+                        <Grid container spacing={2}>
+                          <Grid item xs={12} md={6}>
                             <AppTextField
-                              placeholder='Message'
-                              name='msg'
-                              label='Message'
+                              placeholder='name'
+                              name='name'
+                              label='Name'
                               sx={{
                                 width: '100%',
                                 '& .MuiInputBase-input': {
@@ -246,42 +188,103 @@ const Contact = () => {
                                 },
                               }}
                               variant='outlined'
-                              multiline
-                              rows='4'
                             />
-                          </Box>
+                          </Grid>
+                          <Grid item xs={12} md={6}>
+                            <AppTextField
+                              placeholder='Email'
+                              name='email'
+                              label='Email ID'
+                              sx={{
+                                width: '100%',
+                                '& .MuiInputBase-input': {
+                                  fontSize: 14,
+                                },
+                              }}
+                              variant='outlined'
+                            />
+                          </Grid>
+                          <Grid item xs={12} md={6}>
+                            <AppTextField
+                              placeholder='Mobile Number'
+                              name='mobilenumber'
+                              label='Mobile Number'
+                              sx={{
+                                width: '100%',
+                                '& .MuiInputBase-input': {
+                                  fontSize: 14,
+                                },
+                              }}
+                              variant='outlined'
+                            />
+                          </Grid>
+                          <Grid item xs={12} md={6}>
+                            <FormControl
+                              sx={{
+                                width: '100%',
+                                '&.MuiInputBase-input': { fontSize: 14 },
+                              }}
+                            >
+                              <InputLabel id='demo-simple-select-label'>
+                                Select your interest
+                              </InputLabel>
+                              <Field
+                                name='selection'
+                                as='select'
+                                options={All}
+                                component={CustomizedSelectFormik}
+                              ></Field>
+                            </FormControl>
+                          </Grid>
+                          <Grid item xs={12} >
+                            <Box>
+                              <AppTextField
+                                placeholder='Message'
+                                name='msg'
+                                label='Message'
+                                sx={{
+                                  width: '100%',
+                                  '& .MuiInputBase-input': {
+                                    fontSize: 14,
+                                  },
+                                }}
+                                variant='outlined'
+                                multiline
+                                rows='4'
+                              />
+                            </Box>
+                          </Grid>
+                          <Grid item xs={12} sx={{ mb: { xs: 3, lg: 3 } }}>
+                            {/* <GoogleRecaptcha /> */}
+                            <ErrorMessage name="recaptcha" component="div" style={{ color: 'red' }} />
+                          </Grid>
                         </Grid>
-                        <Grid item xs={12} sx={{ mb: { xs: 3, lg: 3 } }}>
-                          {/* <GoogleRecaptcha /> */}
-                          <ErrorMessage name="recaptcha" component="div" style={{ color: 'red' }} />
-                        </Grid>
-                      </Grid>
-                      <div>
-                        <Button
-                          variant='contained'
-                          color='primary'
-                          disabled={isSubmitting}
-                          sx={{
-                            textTransform: 'capitalize',
-                            fontSize: 16,
-                            minWidth: 160,
-                            backgroundColor:'primary.dark'
-                          }}
-                          type='submit'
-                        >
-                          Submit
-                        </Button>
-                      </div>
-                    </Form>
-                  )}
-                </Formik>
-              </Card>
+                        <div>
+                          <Button
+                            variant='contained'
+                            color='primary'
+                            disabled={isSubmitting}
+                            sx={{
+                              textTransform: 'capitalize',
+                              fontSize: 16,
+                              minWidth: 160,
+                              backgroundColor: 'primary.dark'
+                            }}
+                            type='submit'
+                          >
+                            Submit
+                          </Button>
+                        </div>
+                      </Form>
+                    )}
+                  </Formik>
+                </Card>
+              </Grid>
             </Grid>
-          </Grid>
           </motion.div>
-          </Container>
-        </section>
-     
+        </Container>
+      </section>
+
     </Box>
   );
 };

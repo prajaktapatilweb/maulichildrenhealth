@@ -1,18 +1,12 @@
 import React from 'react'
-import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
-import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '../styled-button';
-import { PlayArrow } from '@mui/icons-material'
 import Hidden from '@mui/material/Hidden';
-import Contact from './Contact'
-import Herocontact from './Herocontacts'
-import Herocontacts from './Herocontacts'
 import Countdown from './Countdown'
-import Image from 'next/image'
+
 
 
 const HomeHero = () => {

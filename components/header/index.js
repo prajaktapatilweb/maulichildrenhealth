@@ -1,2 +1,2 @@
-export { default as Header } from './demonavbar';
+export { default as Header } from './navbar';
 // export { default as Header } from './header';

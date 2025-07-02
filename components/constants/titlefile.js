@@ -3,26 +3,26 @@ const headDetails = {
 
     service: {
 
-        title: <span style={{ color: 'white' }}>Comprehensive Dental Services</span>,
-        subtitle: <span style={{ color: 'white' }}>Tailored treatments to enhance your oral health and smile.</span>
+        title: <span style={{ color: 'white' }}>Complete Dental Solutions</span>,
+        subtitle: <span style={{ color: 'white' }}>From baby teeth to adult care – gentle dentistry for all ages.</span>
 
     },
     drinfo: {
-        title: 'Meet Dr. Sagar R. Dombe',
-        subtitle:'A distinguished orthodontist dedicated to transforming smiles'
+        title: 'Specialist in Kids’ Dentistry & More',
+        subtitle:'Specialised pediatric expertise and complete dental care under one roof.'
 
 
     },
     photos: {
-        title: <span style={{ color: 'white' }}>Our Patient Gallery</span>,
-        subtitle: <span style={{ color: 'white' }}>Celebrating beautiful smiles transformed at Dr. Dombe's Dental Clinic.</span>
+        title: <span style={{ color: 'white' }}>Bright Clinic, Happier Visits</span>,
+        subtitle: <span style={{ color: 'white' }}>See how we make visits fun, gentle, and stress-free.</span>
 
     },
     testi: {
-        title: ' What Our Patients Say',
-        subtitle: ' Hear from our satisfied patients about their experiences with us.'
+        title: 'Smiles That Inspire Us',
+        subtitle: 'Words from parents and patients we care for.'
     },
-    equip: {
+    faq: {
 
         title: "Advanced Dental Technology",
         subtitle: "Ensuring precision and comfort in every treatment.",
@@ -35,8 +35,8 @@ const headDetails = {
 
     },
     connect: {
-        title: ' Get in Touch with Us',
-        subtitle: ' Have questions? We\'re here to help—fill out the form below!'
+        title:'Visit Aesthetic Dental Clinic Today',
+        subtitle: 'Specialised pediatric and family dentistry in Kalamboli, Navi Mumbai.'
     }
 };
 
@@ -46,6 +46,6 @@ export const headList2 = [headDetails.service];
 export const headList3 = [headDetails.drinfo];
 export const headList4 = [headDetails.photos];
 export const headList5 = [headDetails.testi];
-export const headList6 = [headDetails.equip];
+export const headList6 = [headDetails.faq];
 export const headList7 = [headDetails.associate];
 export const headList8 = [headDetails.connect];
