@@ -20,33 +20,33 @@ const altTexts = [
     return (
 
         <div
-        style={{
-          position: 'relative',
-          display: 'inline-block',
-          borderRadius: '15px', // Adjust as needed for rounded corners
-          padding: '4px', // Adjust padding to control border thickness
-          backgroundImage: 'linear-gradient(to right, #765240 10%, #91664f 90%)',
-        }}
-      >
-        <div
-          style={{
-            background: 'white', // Background inside the gradient border
-            borderRadius: '10px', // Inner div border-radius to match the gradient
-            overflow: 'hidden', // Ensures the image stays within the rounded borders
-          }}
-        >
-          <Image
-            alt={altTexts}
-            src={`/images/nashikclinic/clinics${item}.webp`}
-            width={100}
-            height={100}
-            layout="responsive" // Responsive layout for the image
-            className="item"
-          />
-        </div>
-      </div>
-      
-
+  style={{
+    position: 'relative',
+    display: 'inline-block',
+    borderRadius: '12px',
+    padding: '2px',
+    backgroundImage: 'linear-gradient(135deg, #fcb950, #520000)',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    
+  }}
+>
+  <div
+    style={{
+      background: 'white',
+      borderRadius: '10px',
+      overflow: 'hidden',
+    }}
+  >
+    <Image
+      alt={altTexts}
+      src={`/images/nashikclinic/clinics${item}.webp`}
+      width={100}
+      height={100}
+      layout="responsive"
+      className="item"
+    />
+  </div>
+</div>
 
 
     );

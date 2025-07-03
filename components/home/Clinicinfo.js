@@ -3,8 +3,6 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
 import Drgallery from "./Drgallery";
-import Heading from "./Heading";
-import { headList1 } from "../constants/titlefile";
 
 
  // Define the fade-up animation variants
@@ -74,6 +72,7 @@ const Clinicinfo = () => {
     sx={{
         // fontSize: { xs: 27, md: 33 },
         fontWeight: "600",
+        color:'primary.dark'
       
 
     }}
@@ -85,7 +84,7 @@ Smiles for Kids & Beyond
     sx={{
         fontSize: { sm: 18, md: 20 },
         fontWeight: "400",
-        color: 'primary.light',
+        color: '#fcb950',
         pb:1
 
     }}

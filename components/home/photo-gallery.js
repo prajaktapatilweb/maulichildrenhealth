@@ -84,7 +84,7 @@ const fadeUpVariants = {
      <section
   style={{
     position: "relative",
-    background: "linear-gradient(to right, rgba(126,88,68,0.9), rgba(126,88,68,0.9))",
+            background: "linear-gradient(to right, rgba(82, 0, 0, 0.8), rgba(133, 68, 33, 0.8))",
     overflow: "hidden",
     paddingTop: "50px", // Ensures content stays below the wave
     paddingBottom: "50px",

@@ -24,8 +24,8 @@ const headDetails = {
     },
     faq: {
 
-        title: "Advanced Dental Technology",
-        subtitle: "Ensuring precision and comfort in every treatment.",
+        title: "Questions About Pediatric Dentistry?",
+        subtitle: "Quick facts about pediatric and family dental care.",
 
     },
    

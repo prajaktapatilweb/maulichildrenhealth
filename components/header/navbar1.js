@@ -56,7 +56,7 @@ function HideOnScroll(props) {
     });
 }
 
-export default function Navbar(props) {
+export default function Navbar1(props) {
     const [openDrawer, setOpenDrawer] = useState(false);
     const [openSubMenu, setOpenSubMenu] = useState(false);
     const theme = useTheme();
@@ -156,7 +156,7 @@ export default function Navbar(props) {
                             </IconButton>
                         )}
                         <Box sx={{flexGrow:1,textAlign:{xs:'right',sm:'right',md:'left',lg:'left'}}}>
- <Image src="/images/astheticlogo.jpg" width={90} height={80}></Image>
+ <Image src="/images/logodrdombe1.jpg" width={190} height={80} style={{filter:'drop-shadow(0px 1px 0px black)'}}></Image>
  </Box>
                         {/* <Typography
                             variant="h6"
@@ -231,7 +231,7 @@ export default function Navbar(props) {
                                                     <Button
                                                         key={page.label}
                                                         onClick={handleCloseNavMenu}
-                                                        sx={{ mx: 1, color: "white", display: "block",textTransform:'initial',fontSize:'16px',letterSpacing:1 }}>
+                                                        sx={{ mx: 1, color: "#323663", display: "block",textTransform:'initial',fontSize:'16px',letterSpacing:1 }}>
                                                         {page.label}
                                                     </Button>
                                                 </Link>

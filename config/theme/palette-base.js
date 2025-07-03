@@ -1,9 +1,9 @@
 const paletteBase = {
     primary: {
-        light: '#707070',
+        light: '#333333',
         // main: '#127C71',
-        main: '#323663',
-        dark: '#92664f',
+        main: '#fcb950',
+        dark: '#520000',
         contrastText: '#fbfbfb',
     },
     secondary: {

@@ -11,10 +11,12 @@ import Associates from '../components/home/Associates'
 import Contact from '../components/home/Contact'
 import MainLayout1 from '../components/layout/main-layout1'
 import FAQAccordion from '../components/home/FAQAccordion'
+import Demo from '../components/home/Demo'
 
 export default function Home() {
   return (
     <div>
+     
       <Countup></Countup>
 
       {/* <Countdown/> */}

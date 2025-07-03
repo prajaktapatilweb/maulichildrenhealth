@@ -6,7 +6,7 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { motion } from 'framer-motion';
 import Heading from "./Heading";
-import { headList3, headList9 } from "../constants/titlefile";
+import { headList3} from "../constants/titlefile";
 
 
 
@@ -40,11 +40,13 @@ const DrDombe = () => {
     },
   };
 
+
+
   return (
     <>
-      <Box id="Doctors" sx={{ py: 8,textAlign:'center' }}>
+      <Box id="Doctors" sx={{ py: 8, textAlign: 'center' }}>
         <Container>
-   <Heading  data={headList3}/>
+          <Heading data={headList3} />
         </ Container>
 
         <Grid
@@ -55,7 +57,7 @@ const DrDombe = () => {
         >
 
 
-          <Grid item xs={12} sm={5} sx={{ p: 3}}>
+          <Grid item xs={12} sm={5} sx={{ p: 4 }}>
             {/* Framer Motion div with whileInView to trigger zoom and position shift */}
             <motion.div
               initial={{ scale: 0.3, y: 0 }} // Start with normal scale and no shift
@@ -66,15 +68,17 @@ const DrDombe = () => {
               }}
               viewport={{ once: true }} // Animation triggers only once
             >
-              
-              <Image
-                src="/images/dr/drdombe4.png"
-                alt=" Dr. Nikhil Abbad at College Road Dental Clinic"
-                width={100}
-                height={100}
-               layout="responsive"
-               style={{margin:2}}
-              />
+              <div className='wrapper'>
+                <div className='blob'></div>
+                <div className='imageContainer'>
+                  <Image
+                    src="/images/asthetic/dr/dr1.jpg"
+                    alt="Doctor"
+                    fill
+                    className='image'
+                  />
+                </div>
+              </div>
 
             </motion.div>
           </Grid>
@@ -88,8 +92,8 @@ const DrDombe = () => {
             >
               <Box sx={{ px: 2 }}>
 
-              
-              
+
+
 
                 <Box
                   sx={{
@@ -104,21 +108,21 @@ const DrDombe = () => {
                   }}
                 >
                   <Typography>
-<b>Dr. Sunita Taware </b>is a trusted <b>pediatric dentist in Navi Mumbai</b> with over 9 years of dedicated expertise in treating infants, toddlers, children, and adolescents. As a specialist in paedodontics, she is passionate about making dental visits gentle, positive, and completely stress-free for young patients and their families.
-<br></br>
-An MDS postgraduate from a reputed university, Dr. Taware blends advanced clinical skills with a calm, reassuring approach that helps even the most anxious children feel comfortable in the dental chair. She strongly believes in <b>preventive care, early intervention, and dental education</b> to nurture healthy smiles from the very first tooth.
-<br></br>
-Her services include <b>painless pediatric root canals, tooth-colored fillings, cavity prevention, oral habit counseling, and care for children with special needs</b> — all delivered in a child-friendly, welcoming environment that encourages trust and lifelong dental confidence.
-<br></br><br></br>
-<ul class="star-list">
-<li> 9+ Years of Expertise in Pediatric Dentistry</li>
-<li> MDS – Paedodontics focused on preventive & minimally invasive care</li>
-<li> Painless pediatric root canals, fillings & habit-breaking appliances</li>
-<li> Special care for anxious children and kids with special healthcare needs</li>
-<li> Emphasis on early intervention, oral hygiene education & building lifelong healthy habits</li>
-</ul>
+                    <b>Dr. Sunita Taware </b>is a trusted <b>pediatric dentist in Navi Mumbai</b> with over 9 years of dedicated expertise in treating infants, toddlers, children, and adolescents. As a specialist in paedodontics, she is passionate about making dental visits gentle, positive, and completely stress-free for young patients and their families.
+                    <br></br>
+                    An MDS postgraduate from a reputed university, Dr. Taware blends advanced clinical skills with a calm, reassuring approach that helps even the most anxious children feel comfortable in the dental chair. She strongly believes in <b>preventive care, early intervention, and dental education</b> to nurture healthy smiles from the very first tooth.
+                    <br></br>
+                    Her services include <b>painless pediatric root canals, tooth-colored fillings, cavity prevention, oral habit counseling, and care for children with special needs</b> — all delivered in a child-friendly, welcoming environment that encourages trust and lifelong dental confidence.
+                    <br></br><br></br>
+                    <ul class="star-list">
+                      <li> 9+ Years of Expertise in Pediatric Dentistry</li>
+                      <li> MDS – Paedodontics focused on preventive & minimally invasive care</li>
+                      <li> Painless pediatric root canals, fillings & habit-breaking appliances</li>
+                      <li> Special care for anxious children and kids with special healthcare needs</li>
+                      <li> Emphasis on early intervention, oral hygiene education & building lifelong healthy habits</li>
+                    </ul>
 
-                   </Typography>
+                  </Typography>
 
                 </Box>
 
@@ -130,8 +134,8 @@ Her services include <b>painless pediatric root canals, tooth-colored fillings, 
 
 
 
-         
-         
+
+
 
 
         </Grid>
