@@ -528,3 +528,16 @@ section {
   border-radius: 50%;
   object-fit: cover;
 }
+
+.blob1 {
+  position: absolute;
+  top: -4%;
+  left: -5%;
+  width: 109%;
+  height: 108%;
+  background: radial-gradient(circle, #e80914 60%, #e80914 40%, rgba(24,41,122, 1) 70%, #1e3081 75%);
+  /* background: radial-gradient(circle, #fcb950 66%, #520000 0%); */
+  /* background: #520000; */
+  border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
+  z-index: 0;
+}

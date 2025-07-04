@@ -7,10 +7,10 @@ const paletteBase = {
         contrastText: '#fbfbfb',
     },
     secondary: {
-        light: '#FDE6A8',
-        main: '#ffc221',
+        light: '#fefefe',
+        main: '#1e3081',
         // main: '#ffaf35',
-        dark: '#D0821C',
+        dark: '#e80914',
         contrastText: '#fbfbfb',
     },
 };

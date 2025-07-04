@@ -6,14 +6,14 @@ export default function Heading({ data }) {
         <div>
             <Box>
                 {data.map((item) => (
-                    <Box sx={{textAlign:'center'}}>
+                    <Box sx={{ textAlign: 'center' }}>
 
                         <Typography
                             component="h3"
                             sx={{
                                 fontSize: { xs: 27, md: 35 },
                                 fontWeight: "600",
-                              
+                                color: 'primary.dark'
 
                             }}
                         >
@@ -25,8 +25,8 @@ export default function Heading({ data }) {
                             sx={{
                                 // fontSize: { xs: 21, md: 22 },
                                 fontWeight: "400",
-                                color: 'primary.light',
-                                pb:1
+                                color: 'primary.main',
+                                pb: 1
 
                             }}
                         >

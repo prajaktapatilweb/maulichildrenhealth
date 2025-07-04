@@ -13,12 +13,10 @@ import { Link as ScrollLink } from "react-scroll";
 import { StyledButton } from "../styled-button";
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Navbar from "./navbar";
+import { contactdetails } from "../constants/contactdetails";
+import Navbar1 from "./navbar1";
 
-function Mauliheader() {
-
-    const contactno1 = "9890840340";
-    
-
+function Astheticheader() {
     const textVariants = {
         initial: {
             x: -500,
@@ -46,19 +44,27 @@ function Mauliheader() {
     }
 
     return (
-        
+
         <AppBar
             position="static"
             sx={{
-                backgroundImage: { xs: `linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.4)), url("/images/nashikclinic/clinics9.webp")`, sm: `linear-gradient(rgba(1, 1, 1, 0.2), rgba(256, 256, 256, 0.2)), url("/images/nashikclinic/clinics9.webp")`, md:`linear-gradient(to right, rgba(1,1,1, 0.6) 10%, rgba(1,1,1, 0.4) 90%), url('/images/headerback1.jpg')`},
+                backgroundImage: {
+                    xs: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/nashikclinic/clinics9.webp")`,
+                    md: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/headerback4.jpg')`
+                },
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
-                backgroundPosition:'center',
-
+                backgroundPosition: "top",
+                minHeight: { xs: '100vh', md: '80vh' },
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
             }}
         >
             <section style={{
-                background: '#3a302e', width: '100%', padding: 0, borderRadius: 0,
+                background: '#e80914',
+                width: '100%',
+                padding: '3px 0',
             }}>
                 <Container maxWidth="xl">
                     <Box
@@ -85,10 +91,9 @@ function Mauliheader() {
                                     <CallTwoToneIcon />
                                 </IconButton>
 
-                                <Link href={`tel:${contactno1}`} target="_blank">
+                                <Link href={`tel:${contactdetails.phone}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white', marginRight: 10 }}>
-                                    9890840340
-
+                                        {contactdetails.phone}
                                     </a>
                                 </Link>
 
@@ -103,9 +108,9 @@ function Mauliheader() {
                                     <EmailTwoToneIcon />{" "}
                                 </IconButton>
                                 <Link
-                                    href={`mailto:${'shape32aligners@gmail.com'}`} target="_blank">
+                                    href={`mailto:${contactdetails.email}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white' }}>
-                                    shape32aligners@gmail.com
+                                        {contactdetails.email}
 
                                     </a>
                                 </Link>
@@ -193,15 +198,14 @@ function Mauliheader() {
 
             <section style={{
                 padding: 3,
-                background: 'rgba( 255, 255, 255, 1)',
+                background: '#fefefe',
                 boxShadow: ' 0 10px 10px 1px #0000001f',
                 backdropFilter: 'blur( 8px )',
-                borderBottom: '1px solid #ffffff36',
                 display: 'flex'
             }}>
-                <Navbar />
+              <Navbar1/>
             </section>
-            <Box sx={{ my: 18 }}>
+            <Box sx={{ my: 7 }}>
                 {/* <Container> */}
                 <Grid
                     container
@@ -209,36 +213,32 @@ function Mauliheader() {
                     justifyContent="center"
                     textAlign="left"
                 >
-                    <Grid item xs={12} md={8} sx={{ px: {xs:2,sm:3,md:7},py:3, mt: { xs: -7, sm: -7, md: -7 } }}>
+                    <Grid item xs={12} md={9} sx={{ px: { xs: 2, sm: 3, md: 7 },pt:4}}>
                         <motion.div className="textcontainer" variants={textVariants}
                             initial="initial"
                             animate="animate"
                         >
-                            <Box sx={{
-                                position: "relative",
-                                fontSize: { xs: '32px', sm: '30px', md: '38px' },
-                                letterSpacing: 1.5,
+                            <Typography
+                                variant="h2"
+                                sx={{
+                                    fontSize: { xs: '28px', sm: '36px', md: '50px' },
+                                    fontFamily: "Inter, sans-serif",
+                                    color: 'white',
+                                    fontWeight: 800,
+                                    textShadow: '2px 2px 8px rgba(0,0,0,0.7)',
+                                    mb: 2,
+                                }}
+                            >
+                              Nurturing Your Child’s Health, Every Step of the Way
+                            </Typography>
 
-                                color: { xs: 'white', sm: 'white', md: "white" },
-                                lineHeight: 1.2,
-mb:-2,
-                                // '-webkit-text-stroke': '1px #28282B',
-
-
-                            }}>
-                                <motion.h2 variants={textVariants} style={{ fontFamily: "Inter, sans-serif", fontWeight: '800', }} >
-
-                                Transform Your Smile with Expert Care
-
-                                </motion.h2>
-                            </Box>
                             <Hidden smDown>
-                                <Typography
-                                    variant="p"
-                                    sx={{ color: "white", lineHeight: 0, fontSize: 23, lineHeight: 1.2, }}
-                                >
-                                 Trust Dr. Sagar Dombe for bespoke dental treatments in Thergaon, Pune.
 
+                                <Typography
+                                    variant="body1"
+                                    sx={{ color: 'white', fontSize: 20, mb: 1, maxWidth: '80%' }}
+                                >
+Expert pediatric care for newborns, toddlers, and growing kids — by Dr. Parmeshwar Taware at Mauli Children & Multi-Speciality Hospital, Kalamboli.
                                 </Typography>
                             </Hidden>
                             <Box sx={{ "& button": { mt: 3, mb: 7, } }}>
@@ -250,23 +250,23 @@ mb:-2,
                                     duration={350}
                                 >
                                     <StyledButton
-                                        color="white"
                                         size="large"
-                                        variant="outlined"
+                                        variant="contained"
                                         sx={{
-                                            mb: { xs: 3, sm: 0, md: 0 },
-                                            fontSize: 22,
-
-                                            borderRadius: 10,
-                                            backgroundColor: 'white',
-                                            fontWeight:600,
-                                         
-
-                                            color: "#795442",
+                                            backgroundColor: 'secondary.dark',
+                                            color: 'secondary.light',
+                                            fontWeight: 600,
+                                            borderRadius: 2,
+                                            fontSize: 18,
+                                            padding: '10px 24px',
+                                            '&:hover': {
+                                                backgroundColor: '#ffcb66',
+                                            },
                                         }}
                                     >
                                         Enquire Now
                                     </StyledButton>
+
                                 </ScrollLink>
                             </Box>
                         </motion.div>
@@ -279,4 +279,4 @@ mb:-2,
         </AppBar>
     );
 }
-export default Mauliheader;
+export default Astheticheader;

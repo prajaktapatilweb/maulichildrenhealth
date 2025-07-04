@@ -37,6 +37,14 @@ const headDetails = {
     connect: {
         title:'Visit Aesthetic Dental Clinic Today',
         subtitle: 'Specialised pediatric and family dentistry in Kalamboli, Navi Mumbai.'
+    },
+     childservice: {
+        title:<span style={{ color: 'white' }}>Complete Pediatric & Family Care</span>,
+        subtitle: <span style={{ color: 'white' }}>From routine checkups to specialized care — everything your child needs.</span>
+    },
+     childdr: {
+        title:<span style={{color:'#e80914'}}>Meet Dr. Parmeshwar Taware</span>,
+        subtitle: <span style={{color:'#1e3081'}}>MBBS, MD (Pediatrics) – 17+ Years of Experience</span>
     }
 };
 
@@ -49,3 +57,5 @@ export const headList5 = [headDetails.testi];
 export const headList6 = [headDetails.faq];
 export const headList7 = [headDetails.associate];
 export const headList8 = [headDetails.connect];
+export const headList9 = [headDetails.childservice];
+export const headList10 = [headDetails.childdr];

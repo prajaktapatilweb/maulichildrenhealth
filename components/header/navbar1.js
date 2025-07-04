@@ -156,7 +156,7 @@ export default function Navbar1(props) {
                             </IconButton>
                         )}
                         <Box sx={{flexGrow:1,textAlign:{xs:'right',sm:'right',md:'left',lg:'left'}}}>
- <Image src="/images/logodrdombe1.jpg" width={190} height={80} style={{filter:'drop-shadow(0px 1px 0px black)'}}></Image>
+ <Image src="/images/maulilogo.jpg" width={250} height={80}></Image>
  </Box>
                         {/* <Typography
                             variant="h6"
@@ -231,7 +231,7 @@ export default function Navbar1(props) {
                                                     <Button
                                                         key={page.label}
                                                         onClick={handleCloseNavMenu}
-                                                        sx={{ mx: 1, color: "#323663", display: "block",textTransform:'initial',fontSize:'16px',letterSpacing:1 }}>
+                                                        sx={{ mx: 1, color: "#1e3081", display: "block",textTransform:'initial',fontSize:'16px',letterSpacing:1 }}>
                                                         {page.label}
                                                     </Button>
                                                 </Link>

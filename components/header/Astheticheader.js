@@ -43,28 +43,28 @@ function Astheticheader() {
     }
 
     return (
-        
-       <AppBar
-    position="static"
-    sx={{
-        backgroundImage: {
-            xs: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/nashikclinic/clinics9.webp")`,
-            md: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/headerback1.jpg')`
-        },
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: { xs: '100vh', md: '80vh' },
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-    }}
->
-             <section style={{
-        background: '#e2a648',
-        width: '100%',
-        padding: '3px 0',
-    }}>
+
+        <AppBar
+            position="static"
+            sx={{
+                backgroundImage: {
+                    xs: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/nashikclinic/clinics9.webp")`,
+                    md: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/headerback1.jpg')`
+                },
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                minHeight: { xs: '100vh', md: '80vh' },
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+            }}
+        >
+            <section style={{
+                background: '#e2a648',
+                width: '100%',
+                padding: '3px 0',
+            }}>
                 <Container maxWidth="xl">
                     <Box
                         sx={{
@@ -92,7 +92,7 @@ function Astheticheader() {
 
                                 <Link href={`tel:${contactdetails.phone}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white', marginRight: 10 }}>
-                                   {contactdetails.phone}
+                                        {contactdetails.phone}
                                     </a>
                                 </Link>
 
@@ -109,7 +109,7 @@ function Astheticheader() {
                                 <Link
                                     href={`mailto:${contactdetails.email}`} target="_blank">
                                     <a className="nav-link-inner--text" style={{ color: 'white' }}>
-                                  {contactdetails.email}
+                                        {contactdetails.email}
 
                                     </a>
                                 </Link>
@@ -213,33 +213,33 @@ function Astheticheader() {
                     justifyContent="center"
                     textAlign="left"
                 >
-                    <Grid item xs={12} md={8} sx={{ px: {xs:2,sm:3,md:7},py:10, mt: { xs: -7, sm: -7, md: -7 } }}>
+                    <Grid item xs={12} md={8} sx={{ px: { xs: 2, sm: 3, md: 7 }, py: 10, mt: { xs: -7, sm: -7, md: -7 } }}>
                         <motion.div className="textcontainer" variants={textVariants}
                             initial="initial"
                             animate="animate"
                         >
-                                 <Typography
-                            variant="h2"
-                            sx={{
-                                fontSize: { xs: '28px', sm: '36px', md: '50px' },
-                                fontFamily: "Inter, sans-serif",
-                                color: 'white',
-                                fontWeight: 800,
-                                textShadow: '2px 2px 8px rgba(0,0,0,0.7)',
-                                mb: 2,
-                            }}
-                        >
-                            Healthy Smiles Begin with Gentle Dental Care
-                        </Typography>
-                           
-                            <Hidden smDown>
-                                
-                                  <Typography
-                                variant="body1"
-                                sx={{ color: 'white', fontSize: 20, mb: 1, maxWidth: '80%' }}
+                            <Typography
+                                variant="h2"
+                                sx={{
+                                    fontSize: { xs: '28px', sm: '36px', md: '50px' },
+                                    fontFamily: "Inter, sans-serif",
+                                    color: 'white',
+                                    fontWeight: 800,
+                                    textShadow: '2px 2px 8px rgba(0,0,0,0.7)',
+                                    mb: 2,
+                                }}
                             >
-                                From root canals to braces, get advanced, pain-free dental treatment for all ages by Dr. Sunita Taware at Aesthetic Dental Clinic in Kalamboli.
+                                Healthy Smiles Begin with Gentle Dental Care
                             </Typography>
+
+                            <Hidden smDown>
+
+                                <Typography
+                                    variant="body1"
+                                    sx={{ color: 'white', fontSize: 20, mb: 1, maxWidth: '80%' }}
+                                >
+                                    From root canals to braces, get advanced, pain-free dental treatment for all ages by Dr. Sunita Taware at Aesthetic Dental Clinic in Kalamboli.
+                                </Typography>
                             </Hidden>
                             <Box sx={{ "& button": { mt: 3, mb: 7, } }}>
                                 <ScrollLink
@@ -249,23 +249,23 @@ function Astheticheader() {
                                     offset={0}
                                     duration={350}
                                 >
-                                   <StyledButton
-                                size="large"
-                                variant="contained"
-                                sx={{
-                                    backgroundColor: '#fcb950',
-                                    color: '#520000',
-                                    fontWeight: 600,
-                                    borderRadius: 2,
-                                    fontSize: 18,
-                                    padding: '10px 24px',
-                                    '&:hover': {
-                                        backgroundColor: '#ffcb66',
-                                    },
-                                }}
-                            >
-                                Enquire Now
-                            </StyledButton>
+                                    <StyledButton
+                                        size="large"
+                                        variant="contained"
+                                        sx={{
+                                            backgroundColor: '#fcb950',
+                                            color: '#520000',
+                                            fontWeight: 600,
+                                            borderRadius: 2,
+                                            fontSize: 18,
+                                            padding: '10px 24px',
+                                            '&:hover': {
+                                                backgroundColor: '#ffcb66',
+                                            },
+                                        }}
+                                    >
+                                        Enquire Now
+                                    </StyledButton>
 
                                 </ScrollLink>
                             </Box>

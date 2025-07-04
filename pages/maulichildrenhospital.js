@@ -1,12 +1,18 @@
 import { MainLayout } from '../components/layout';
-import Whatwedo from '../components/home/Maulichildren/Whatwedo';
-import Mauliheader from '../components/header/Mauliheader';
+import Countdown from '../components/home/Countdown';
+import Clinicinfomauli from '../components/home/Maulichildren/Clinicinfomauli';
+import Mauliservices from '../components/home/Maulichildren/Mauliservices';
+import DrParmeshwar from '../components/home/Maulichildren/DrParmeshwar ';
+import InsurerLogos from '../components/home/Maulichildren/InsurerLogos';
 
 export default function Home() {
   return (
     <>
- 
-<Whatwedo/>
+ <Countdown/>
+<Clinicinfomauli/>
+<Mauliservices/>
+<DrParmeshwar/>
+<InsurerLogos/>
     </>
   )
 }

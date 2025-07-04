@@ -73,8 +73,6 @@ const Clinicinfo = () => {
         // fontSize: { xs: 27, md: 33 },
         fontWeight: "600",
         color:'primary.dark'
-      
-
     }}
 >
 Smiles for Kids & Beyond
