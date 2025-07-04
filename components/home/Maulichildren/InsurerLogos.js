@@ -2,7 +2,7 @@ import { Box, Container, Grid } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import Heading from '../Heading';
-import { headList10 } from '../../constants/titlefile';
+import { headList10, headList11 } from '../../constants/titlefile';
 
 const logos = [
   { src: '/images/insurance/bajaj2.png', alt: 'Bajaj Allianz' },
@@ -14,8 +14,8 @@ const logos = [
 const InsurerLogos = () => {
   return (
     <section style={{backgroundColor:'#f5f5f5'}}>
-    <Container sx={{py:7}}>
-          <Heading data={headList10} />
+    <Container sx={{pt:7,pb:4}}>
+          <Heading data={headList11} />
         <Grid
           container
           spacing={2}
@@ -34,13 +34,13 @@ const InsurerLogos = () => {
         height='100'
         style={{
     border: '1px solid grey',
-    boxShadow: '0 10px 8px rgba(0, 0, 0, 0.3)', // Soft shadow
+    boxShadow: '0 10px 8px rgba(0, 0, 0, 0.4)', // Soft shadow
     borderRadius: '8px', // Rounded corners
     transition: 'transform 0.3s, box-shadow 0.3s', // Smooth hover effect
   }}
   onMouseOver={e => {
     e.currentTarget.style.transform = 'scale(1.05)';
-    e.currentTarget.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.2)';
+    e.currentTarget.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.3)';
   }}
   onMouseOut={e => {
     e.currentTarget.style.transform = 'scale(1)';

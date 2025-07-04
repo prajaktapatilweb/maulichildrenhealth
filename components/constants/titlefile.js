@@ -45,8 +45,29 @@ const headDetails = {
      childdr: {
         title:<span style={{color:'#e80914'}}>Meet Dr. Parmeshwar Taware</span>,
         subtitle: <span style={{color:'#1e3081'}}>MBBS, MD (Pediatrics) – 17+ Years of Experience</span>
-    }
+    },
+      childinsurance: {
+        title:<span style={{color:'#e80914'}}>Quality Care, Hassle-Free Access</span>,
+        subtitle: <span style={{color:'#1e3081'}}>Seamless cashless facility with trusted insurers.</span>
+    },
+      childgallery: {
+        title:<span style={{color:'white'}}> Our World in Pictures</span>,
+        subtitle: <span style={{color:'white'}}>See how we create a safe, welcoming space for every child.</span>
+    },
+      childtesti: {
+        title:<span style={{color:'#e80914'}}> Stories That Inspire Us</span>,
+        subtitle: <span style={{color:'#1e3081'}}> Stories of trust, care and happier childhoods.</span>
+    },
+     childfaq: {
+        title:<span style={{color:'#e80914'}}>Need More Information?</span>,
+        subtitle: <span style={{color:'#1e3081'}}> Find answers to your most common pediatric care questions.</span>
+    },
+      childcontact: {
+        title:<span style={{color:'#e80914'}}>We’re Here for You, 24/7</span>,
+        subtitle: <span style={{color:'#1e3081'}}> Your journey to better child health starts here.</span>
+    },
 };
+
 
 
 
@@ -59,3 +80,8 @@ export const headList7 = [headDetails.associate];
 export const headList8 = [headDetails.connect];
 export const headList9 = [headDetails.childservice];
 export const headList10 = [headDetails.childdr];
+export const headList11 = [headDetails.childinsurance];
+export const headList12 = [headDetails.childgallery];
+export const headList13 = [headDetails.childtesti];
+export const headList14 = [headDetails.childfaq];
+export const headList15 = [headDetails.childcontact];

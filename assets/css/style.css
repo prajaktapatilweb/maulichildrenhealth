@@ -354,6 +354,7 @@ section {
   /* background: url("../public/vision.jpg") center center no-repeat; */
   background-size: cover;
   position: relative;
+ 
 
 }
 
@@ -369,6 +370,7 @@ section {
   right: 0;
   left: 0;
   bottom: 0;
+  
 }
 
 .events1 .container {
