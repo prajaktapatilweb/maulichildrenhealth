@@ -21,14 +21,12 @@ const Footer = () => {
         <Grid container spacing={2} alignItems='center' justifyContent='center'>
           <Grid item xs={12} md={5}>
             <Box sx={{ mb: { xs: 3, md: 0 } }}>
-              <Image src="/images/logodrdombe2.jpg" width={120} height={60} className="pngback" objectFit="contain"></Image>
+              <Image src="/images/astheticlogo.jpg" width={80} height={60} className="pngback" objectFit="contain"></Image>
 
 
 
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                Dr. Dombe's Dental Clinic in Thergaon, Pune delivers top-notch dental care in a friendly environment. With a focus on personalized treatment and modern techniques, Dr. Dombe ensures your smile is always a priority. Schedule your appointment today!
-
-
+Aesthetic Dental Clinic in Kalamboli, Navi Mumbai, led by Dr. Sunita Taware (15+ years exp.) offers all dental services like Single Sitting RCT, dental implants, veneers, braces & aligners, teeth whitening, wisdom tooth removal & more.
               </Typography>
 
 

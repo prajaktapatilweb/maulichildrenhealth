@@ -7,28 +7,26 @@ import CountUp from 'react-countup';
 
 export default function Countup() { 
     var Details = [
-        {
-            startnumber: '1000',
-            numbers: '10600',
-          title: 'Happy Smiles',
-        },
-        {
+          {
             startnumber: '1',
-            numbers: '18',
+            numbers: '15',
           title: 'Years of Experience',
         },
-    
-        {
-            startnumber: '2',
-            numbers: '26',
+         {
+            startnumber: '100',
+            numbers: '500',
           title: 'Dental Implants',
         },
-
         {
-          startnumber: '0',
-          numbers: '4.9',
-          title: 'Google Ratings',
-          decimals: 1,
+            startnumber: '500',
+            numbers: '2000 ',
+          title: 'Successful Root Canals',
+        },
+        {
+          startnumber: '70',
+          numbers: '100',
+          title: 'Sterilization Standards',
+        //   decimals: 1,
         },
       ];
     
@@ -91,10 +89,10 @@ const fadeUpVariants = {
                     end={item.numbers}
                     duration={5}
                     start={item.startnumber}
-                    decimals={item.decimals ? item.decimals : 0}
+                    suffix={i === Details.length - 1 ? '%' : '+'} // 👈 Dynamic suffix
+                    // decimals={item.decimals ? item.decimals : 0}
                     className="paras"
                 />{' '}
-                <span className="paras" style={{ color: '#520000', fontSize: '28px', fontWeight: 'bold' }}>+</span>
                 <Typography
                     variant="h4"
                     sx={{

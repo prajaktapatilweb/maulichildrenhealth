@@ -82,7 +82,7 @@ Smiles for Kids & Beyond
     sx={{
         fontSize: { sm: 18, md: 20 },
         fontWeight: "400",
-        color: '#fcb950',
+        color: '#71797E',
         pb:1
 
     }}
@@ -100,11 +100,11 @@ Gentle pediatric dentistry and complete family dental care.
                
               }}
             >
-<b>Aesthetic Dental Clinic</b> in Kalamboli is dedicated to creating a positive, gentle, and comfortable dental experience for children and families alike. Led by <b>Dr. Sunita Taware, BDS, MDS – Paedodontist </b>, the clinic combines deep expertise in pediatric dentistry with a reassuring, child-friendly approach helping even the most anxious little ones feel relaxed.
+<b>Aesthetic Dental Clinic</b> in Kalamboli is dedicated to creating a positive, gentle, and comfortable dental experience for children and families alike. Led by Dr. Sunita Taware, BDS, MDS – Paedodontist, the clinic combines deep expertise in pediatric dentistry with a reassuring, child-friendly approach helping even the most anxious little ones feel relaxed.
      <br /><br/>
-We focus on <b>preventive, restorative, and aesthetic care for kids,</b> including cavity prevention, fluoride applications, pit & fissure sealants, pediatric root canals, space maintainers, and interceptive orthodontics. Every visit aims to build trust and lifelong healthy habits.
+We focus on preventive,restorative, and aesthetic care for kids, including cavity prevention, fluoride applications, pit & fissure sealants, pediatric root canals, space maintainers, and interceptive orthodontics. Every visit aims to build trust and lifelong healthy habits.
      <br /><br/>
-Beyond pediatric care, we also <b>offer a full spectrum of advanced dental services for adults and seniors,</b> such as dental implants, smile designing, fixed orthodontics, prosthetic rehabilitation, gum surgeries, root canal treatments, wisdom tooth removal, ultrasonic cleaning, tobacco habit counselling, and digital dental X-rays.
+Beyond pediatric care, we also offer a full spectrum of advanced dental services for adults and seniors, such as dental implants, smile designing, fixed orthodontics, prosthetic rehabilitation, gum surgeries, root canal treatments, wisdom tooth removal, ultrasonic cleaning, tobacco habit counselling, and digital dental X-rays.
      <br /><br/>
 With modern technology, evidence-based treatment plans, and open communication with parents and patients, Aesthetic Dental Clinic ensures every smile from the first tooth to adulthood, receives the care it truly deserves.
 

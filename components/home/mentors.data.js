@@ -4,37 +4,37 @@ export const data = [
     {
 
         id: 1,
-        photo: '/images/mentors/testis1.jpeg',
-        name: 'Supriya Sanghavi',
+        photo: '/images/mentors/assthetictesti1.jpg',
+        name: 'Tarun Bora ',
         category: '',
-        description: 'I visited Dr. Leena Abbad for my dental treatment. It was a completely painless procedure where in she took all the required precautions every time..  Very good service, hygiene and helpful staff. I would highly recommend it to everyone.',
+        description: 'Appreciate the honest advice and professional care no unnecessary treatments, just what’s truly needed.',
 
     },
     {
 
         id: 2,
-        photo: '/images/mentors/testis2.jpeg',
-        name: 'Pallavi Birhade',
+        photo: '/images/mentors/asthetictesti2.jpg',
+        name: 'Sakshi Deshmukh',
         category: '',
-        description: 'It was great experience in terms of diagnosis and treatment. Dr. Nikhil helped me to understand the cause and possible consequences and how the treatment will avoid future issues. This was great help and even the entire staff and doctors team is very supportive and helpful.',
+        description: 'As a concerned parent, I wanted to ensure my daughter’s teeth were protected from cavities. I read about fluoride treatments and found Aesthetic Dental Clinic. The consultation was informative, and the procedure was quick and painless. With a doctor trained in both BDS and MDS specializing in pediatric care, I knew my child was in the right hands. We\'ve now made this our family dental care center.',
 
     },
     {
 
         id: 3,
-        photo: '/images/mentors/testis4.jpeg',
-        name: 'Vaishnavi Patil',
+        photo: '/images/mentors/asthetictesti3.jpg',
+        name: 'Saurao Shelke',
         category: ' ',
-        description: 'I highly recommend. He is so far the best dentist I have been to. Dr explains each and every procedure properly , he will clear all your doubts and give you the best solution and the work is perfect.',
+        description: 'Clean, professional, and genuinely caring an excellent dental experience from start to finish.',
 
     },
     {
 
         id: 4,
-        photo: '/images/mentors/testis3.jpeg',
-        name: 'Vibhavari Khadke',
+        photo: '/images/mentors/asthetictesti4.jpg',
+        name: 'Swapnil Jagtap',
         category: '',
-        description: 'My mother in law is such a delicate and sensitive person, and Dr. Nikhil Abbad  is not only an Excellent Doctor, he is simple, superb Human being, Sober, approachable, a Great Social Worker, friendly approach with a smiling face with his selfless service. He is an extraordinarily intelligent Doctor with human values. He always gives genuine advice , I hardly find such a  personality. Our best wishes are always with you sir...',
+        description: 'Tried their teeth whitening treatment before my engagement what a difference Dr. Taware was meticulous and gentle. I walked out smiling brighter than ever.',
 
     },
 
@@ -42,21 +42,13 @@ export const data = [
     {
 
         id: 5,
-        photo: '/images/mentors/testis5.jpeg',
-        name: 'Rajesh Surana',
+        photo: '/images/mentors/asthetictesti5.jpg',
+        name: 'Vishal Patil',
         category: ' ',
-        description: 'It was a great experience. I came from Pune to get a proper treatment with expertise and care as I’m diabetic and Dr Nikhil Abbad proved that he is truly an expert in his profession. He is a patient caring person. His first priority is patient’s comfort and satisfaction. I strongly recommend him for a complete dental care for a person of any age. His staff and team is also very cooperative and supportive. Impressed with post operative follow-ups taken by his team.',
+        description: 'Doctors who listen to patients concerns, explain their conditions and treatment options clearly, and are supportive are highly valued.',
 
     },
-    {
-
-        id: 6,
-        photo: '/images/mentors/testis6.jpeg',
-        name: 'ASHUTOSH JAIN',
-        category: ' ',
-        description:'I had the pleasure of taking my mother to one of the best dental clinics in Nashik, and I must say it was an excellent experience. The doctor was highly professional and qualified, and we were referred to this clinic by my cousin. From the very first day of the treatment to the post-treatment care, everything was handled with utmost precision and care. The staff was courteous, and their genuine care for patients was evident throughout. I will definitely recommend this clinic to everyone seeking top-notch dental care.'
-
-    },
+   
    
 ];
 

@@ -132,7 +132,7 @@ function Astheticheader() {
                             <IconButton aria-label="facebook">
                                 {" "}
                                 <a
-                                    href="https://www.facebook.com/abbaddentalclinicnashik/"
+                                    href=" https://www.facebook.com/aesthetic.dental.cliniic/"
                                     target="_blank"
                                     rel="noreferrer"
                                     aria-label="facebook"
@@ -143,7 +143,7 @@ function Astheticheader() {
 
                             <IconButton aria-label="instagram">
                                 <a
-                                    href="https://www.instagram.com/sagardombe/"
+                                    href="https://www.instagram.com/aesthetic.dental.cliniic"
                                     target="_blank"
                                     rel="noreferrer"
                                     aria-label="instagram"
@@ -156,7 +156,7 @@ function Astheticheader() {
 
                             <IconButton aria-label="youtube">
                                 <a
-                                    href=" https://www.youtube.com/channel/UCxI-_YXru2XT7vwf2PZC9hg"
+                                    href="https://www.youtube.com/@aesthetic.dental.cliniic"
                                     target="_blank"
                                     rel="noreferrer"
                                     aria-label="youtube"

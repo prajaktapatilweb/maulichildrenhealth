@@ -28,7 +28,7 @@ const MentorCardItem = ({ item }) => {
   const description = item.description ? String(item.description) : '';
   
   // Define the truncated text
-  const truncatedText = description.slice(0, 230); // Show only the first 100 characters
+  const truncatedText = description.slice(0, 150); // Show only the first 100 characters
 
   return (
     <motion.div

@@ -32,14 +32,14 @@ import Image from "next/image";
 //   { label: "Pricing" },
 // ];
 const navItems = [
-    { linkID: "/#home", label: "Home" },
-    { linkID: "/#aboutus", label: "About Us" },
-    { linkID: "/#treatments", label: "Treatments" },
-    { linkID: "/#Doctors", label: "Doctors" },
-    { linkID: "/#gallery", label: "Gallery" },
+    { linkID: "/astheticdental/#home", label: "Home" },
+    { linkID: "/astheticdental/#aboutus", label: "About Us" },
+    { linkID: "/astheticdental/#treatments", label: "Treatments" },
+    { linkID: "/astheticdental/#Doctors", label: "Doctors" },
+    { linkID: "/astheticdental/#gallery", label: "Gallery" },
     // { linkID: "/#awards", label: "Awards" },
-    { linkID: "/#testimonials", label: "Testimonials" },
-    { linkID: "/#contactform", label: "Contact" },
+    { linkID: "/astheticdental/#testimonials", label: "Testimonials" },
+    { linkID: "/astheticdental/#contactform", label: "Contact" },
 ];
 
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];

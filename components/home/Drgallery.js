@@ -45,12 +45,12 @@ const Drgallery = () => {
         ),
     };
     return (
-        <Box>
+        <Box sx={{p:{xs:1,sm:1,md:3}}}>
 
 
             <Slider {...sliderConfig}>
                 {/* {data.map((item) => (<PhotoCardItem key={String(item.id)} item={item} />))} */}
-                {[...Array(11)].slice(0).map((e, i) => (
+                {[...Array(4)].slice(0).map((e, i) => (
                     <Drgalleryitem key={i} item={i + 1} />
                 ))}
             </Slider>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Avatar from '@mui/material/Avatar';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Card, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Heading from './Heading';
@@ -98,7 +98,7 @@ export default function Dentalservices() {
         <section
           style={{
             position: "relative",
-            background: "linear-gradient(to right, rgba(82, 0, 0, 0.6), rgba(133, 68, 33, 0.6))",
+            background: "linear-gradient(to right, rgba(82, 0, 0, 0.8), rgba(133, 68, 33, 0.8))",
             overflow: "hidden",
             paddingBottom: "100px", // Ensures content stays above the wave
           }}
@@ -109,9 +109,9 @@ export default function Dentalservices() {
             <Container component={motion.div} variants={containerVariants} initial="hidden" animate="visible">
 
               <Grid container spacing={0} sx={{ py: 6 }} textAlign='center' alignItems='center' justifyContent='center'>
-                <Grid item xs={12} md={8}>
+                <Grid item xs={12} md={12}>
                   {/* Show limited cards on mobile, and all cards on desktop */}
-                  <Grid container spacing={0} textAlign='center' alignItems='center' justifyContent='center' sx={{ pb: 3 }}>
+                  <Grid container spacing={3} textAlign='center' alignItems='center' justifyContent='center' sx={{ pb: 3 }}>
                     {Details.map((item, i) => (
                       <Grid
                         item
@@ -126,8 +126,27 @@ export default function Dentalservices() {
                           alignItems: 'center', // Center content horizontally
                           textAlign: 'center', // Center text inside the Grid
                           height: '100%', // Ensure the Grid takes full height
+                          pb:5
                         }}
                       >
+                        <Card
+                                                
+                                                sx={{
+                                                  py: 2,
+                                                  width:'100%',
+                                                  borderRadius: 4,
+                                                  display: 'flex', // Flexbox to align content inside
+                                                  flexDirection: 'column',
+                                                  justifyContent: 'space-between', // Pushes content to top and bottom for consistency
+                                                  textAlign: 'center',
+                                                  transition: 'transform 0.3s, box-shadow 0.3s',
+                                                  cursor: 'pointer',
+                                                  backgroundColor: 'transparent',
+                                                  border: '1px solid white',
+                                                  borderBottom: '3px solid #fcb950',
+                                                  '&:hover': { transform: 'scale(1.05)', boxShadow: '0 10px 20px rgba(0,0,0,0.2)',  borderBottom: '4px solid #fcb950', },
+                                                }}
+                                              >
                         <motion.div
                           variants={fadeUpVariants}
                           initial="hidden"
@@ -145,8 +164,8 @@ export default function Dentalservices() {
                             alt="R"
                             src=""
                             sx={{
-                              width: 70, // Avatar width
-                              height: 70, // Avatar height
+                              width: 80, // Avatar width
+                              height: 80, // Avatar height
                               backgroundColor: 'transparent', // Optional background color
                               display: 'flex', // Flexbox for inner content
                               justifyContent: 'center', // Center content horizontally
@@ -166,7 +185,7 @@ export default function Dentalservices() {
 
                           {/* Title */}
                           <Typography
-                            variant="h5"
+                            variant="h4"
                             sx={{
                               color: 'white',
                               textAlign: 'center',
@@ -175,38 +194,13 @@ export default function Dentalservices() {
                             {item.title}
                           </Typography>
                         </motion.div>
+                        </Card>
                       </Grid>
                     ))}
 
                   </Grid>
                 </Grid>
-                <Grid item xs={12} md={4}>
-                  <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
-                    <iframe src="https://www.youtube.com/embed/Pyd8OcdGpSQ" title="shape32  aligners for everyone, aligner workflow, aligner manufacturing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        border: 0,
-                      }}></iframe>
-                    {/* <iframe
-        src="https://www.youtube.com/embed/VIDEO_ID"
-        title="YouTube video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          border: 0,
-        }}
-      ></iframe> */}
-                  </div>
-                </Grid>
+               
               </Grid>
             </Container >
           </Box>

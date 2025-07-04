@@ -129,12 +129,12 @@ const Contact = () => {
 
                       <div style={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center' }}>
                         <LocationOnIcon className='bx' />
-                        <h3>Our Location</h3>
+                        <h3 style={{color:'#36454F'}}>Our Location</h3>
                       </div>
                       <p style={{ marginTop: 0 }}>{contactdetails.address}</p><br></br>
                       <div style={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center' }}>
                         <EmailTwoToneIcon className='bx'></EmailTwoToneIcon>
-                        <h3>Working Hours</h3>
+                        <h3 style={{color:'#36454F'}}>Working Hours</h3>
                       </div>
                       <p style={{ marginTop: 0 }}> Monday to Saturday: 10:00 AM–09:30 PM<br />
                         Sunday - By Appointment
@@ -144,7 +144,7 @@ const Contact = () => {
                       <div style={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center' }}>
                         <CallTwoToneIcon className='bx' />
 
-                        <h3>Contact Us</h3>
+                        <h3 style={{color:'#36454F'}}>Contact Us</h3>
                       </div>
                       <Link href={`tel:${contactdetails.phone}`} target="_blank" sx={{ color: 'primary.dark', mt: 0 }}>+{contactdetails.phone}</Link>
                       <br />
