@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-    AppBar,
     Toolbar,
     IconButton,
     Drawer,
@@ -47,16 +46,11 @@ function HideOnScroll(props) {
 
 export default function Navbar(props) {
     const [openDrawer, setOpenDrawer] = useState(false);
-    const [openSubMenu, setOpenSubMenu] = useState(false);
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
 
     const toggleDrawer = (open) => () => {
         setOpenDrawer(open);
-    };
-
-    const handleSubMenuClick = () => {
-        setOpenSubMenu(!openSubMenu);
     };
 
     const handleCloseNavMenu = () => {
@@ -67,33 +61,27 @@ export default function Navbar(props) {
         <List>
             {navItems.map((item) => (
                 <React.Fragment key={item.label}>
-                    {item?.subGroup ? (
-                        <>
-                            <ListItem button onClick={handleSubMenuClick}>
-                                <ListItemText primary={item.label} />
-                                {openSubMenu ? <ExpandLess /> : <ExpandMore />}
-                            </ListItem>
-                            <Collapse in={openSubMenu} timeout="auto" unmountOnExit>
-                                <List component="div" disablePadding>
-                                    {item?.subGroup.map((item2) => (
-                                        <ListItem button key={item2.label} sx={{ pl: 4 }}>
-                                            <ListItemText primary={item2.label} />
-                                        </ListItem>
-                                    ))}
-                                </List>
-                            </Collapse>
-                        </>
-                    ) : (
-                        <Link href={item.linkID} passHref>
-                            <Button
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: "black", display: "block", textTransform: 'initial', fontSize: '16px', letterSpacing: 1 }}
-                                component="a"
-                            >
-                                {item.label}
-                            </Button>
-                        </Link>
-                    )}
+                    <Link href={item.linkID} passHref legacyBehavior>
+                        <Button
+                            onClick={handleCloseNavMenu}
+                            sx={{
+                                my: 2,
+                                color: "black",
+                                display: "block",
+                                textTransform: 'initial',
+                                fontSize: '16px',
+                                letterSpacing: 1,
+                                textDecoration: 'none',
+                                '&:hover': {
+                                    color: 'red',
+                                    backgroundColor: 'transparent',
+                                },
+                            }}
+                            component="a"
+                        >
+                            {item.label}
+                        </Button>
+                    </Link>
                 </React.Fragment>
             ))}
         </List>
@@ -119,48 +107,27 @@ export default function Navbar(props) {
                                 <Stack direction="row">
                                     {navItems.map((page) => (
                                         <React.Fragment key={page.label}>
-                                            {page?.subGroup ? (
-                                                // Example: Dropdown Menu (you can expand this if needed)
-                                                <Box>
-                                                    <Button
-                                                        onClick={handleSubMenuClick}
-                                                        sx={{ mx: 1, color: "white", display: "block", textTransform: 'initial', fontSize: '16px', letterSpacing: 1 }}
-                                                    >
-                                                        {page.label}
-                                                        {openSubMenu ? <ExpandLess /> : <ExpandMore />}
-                                                    </Button>
-                                                    <Menu
-                                                        sx={{ mt: "45px" }}
-                                                        id="menu-appbar"
-                                                        anchorOrigin={{
-                                                            vertical: "top",
-                                                            horizontal: "right",
-                                                        }}
-                                                        transformOrigin={{
-                                                            vertical: "top",
-                                                            horizontal: "right",
-                                                        }}
-                                                        open={openSubMenu}
-                                                        onClose={handleSubMenuClick}
-                                                    >
-                                                        {page?.subGroup.map((setting) => (
-                                                            <MenuItem key={setting.label} onClick={handleSubMenuClick}>
-                                                                {setting.label}
-                                                            </MenuItem>
-                                                        ))}
-                                                    </Menu>
-                                                </Box>
-                                            ) : (
-                                                <Link href={page.linkID} passHref>
-                                                    <Button
-                                                        onClick={handleCloseNavMenu}
-                                                        sx={{ mx: 1, color: "white", display: "block", textTransform: 'initial', fontSize: '16px', letterSpacing: 1 }}
-                                                        component="a"
-                                                    >
-                                                        {page.label}
-                                                    </Button>
-                                                </Link>
-                                            )}
+                                            <Link href={page.linkID} passHref legacyBehavior>
+                                                <Button
+                                                    onClick={handleCloseNavMenu}
+                                                    sx={{
+                                                        mx: 1,
+                                                        color: "white",
+                                                        display: "block",
+                                                        textTransform: 'initial',
+                                                        fontSize: '16px',
+                                                        letterSpacing: 1,
+                                                        textDecoration: 'none',
+                                                        '&:hover': {
+                                                            color: 'red',
+                                                            backgroundColor: 'transparent',
+                                                        },
+                                                    }}
+                                                    component="a"
+                                                >
+                                                    {page.label}
+                                                </Button>
+                                            </Link>
                                         </React.Fragment>
                                     ))}
                                 </Stack>
