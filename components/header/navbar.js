@@ -9,11 +9,11 @@ import {
     Collapse,
     useMediaQuery,
     Container,
+    Menu,
+    MenuItem,
     Button,
     Box,
     Stack,
-    Menu,
-    MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
@@ -57,32 +57,32 @@ export default function Navbar(props) {
         setOpenDrawer(false);
     };
 
+    // Mobile Menu Renderer
     const renderMenu = (
         <List>
             {navItems.map((item) => (
-                <React.Fragment key={item.label}>
-                    <Link href={item.linkID} passHref legacyBehavior>
-                        <Button
-                            onClick={handleCloseNavMenu}
-                            sx={{
-                                my: 2,
-                                color: "black",
-                                display: "block",
-                                textTransform: 'initial',
-                                fontSize: '16px',
-                                letterSpacing: 1,
-                                textDecoration: 'none',
-                                '&:hover': {
-                                    color: 'red',
-                                    backgroundColor: 'transparent',
-                                },
-                            }}
-                            component="a"
-                        >
-                            {item.label}
-                        </Button>
-                    </Link>
-                </React.Fragment>
+                <ListItem key={item.label}>
+                    <Button
+                        component={Link}
+                        href={item.linkID}
+                        onClick={handleCloseNavMenu}
+                        sx={{
+                            my: 2,
+                            color: "black",
+                            display: "block",
+                            textTransform: 'initial',
+                            fontSize: '16px',
+                            letterSpacing: 1,
+                            textDecoration: 'none',
+                            '&:hover': {
+                                color: 'red',
+                                backgroundColor: 'transparent',
+                            },
+                        }}
+                    >
+                        {item.label}
+                    </Button>
+                </ListItem>
             ))}
         </List>
     );
@@ -92,43 +92,44 @@ export default function Navbar(props) {
             <HideOnScroll {...props}>
                 <Container>
                     <Toolbar>
+                        {/* Mobile Menu Button */}
                         {!isLargeScreen && (
                             <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
                                 <MenuIcon style={{ color: 'black' }} />
                             </IconButton>
                         )}
 
+                        {/* Logo */}
                         <Box sx={{ flexGrow: 1, textAlign: { xs: 'right', sm: 'right', md: 'left', lg: 'left' } }}>
                             <Image src="/images/astheticlogo.jpg" width={90} height={80} alt="Logo" />
                         </Box>
 
+                        {/* Desktop Menu */}
                         {isLargeScreen && (
                             <Box sx={{ flexGrow: 0 }}>
                                 <Stack direction="row">
                                     {navItems.map((page) => (
-                                        <React.Fragment key={page.label}>
-                                            <Link href={page.linkID} passHref legacyBehavior>
-                                                <Button
-                                                    onClick={handleCloseNavMenu}
-                                                    sx={{
-                                                        mx: 1,
-                                                        color: "white",
-                                                        display: "block",
-                                                        textTransform: 'initial',
-                                                        fontSize: '16px',
-                                                        letterSpacing: 1,
-                                                        textDecoration: 'none',
-                                                        '&:hover': {
-                                                            color: 'red',
-                                                            backgroundColor: 'transparent',
-                                                        },
-                                                    }}
-                                                    component="a"
-                                                >
-                                                    {page.label}
-                                                </Button>
-                                            </Link>
-                                        </React.Fragment>
+                                        <Button
+                                            key={page.label}
+                                            component={Link}
+                                            href={page.linkID}
+                                            onClick={handleCloseNavMenu}
+                                            sx={{
+                                                mx: 1,
+                                                color: "#1e3081",
+                                                display: "block",
+                                                textTransform: 'initial',
+                                                fontSize: '16px',
+                                                letterSpacing: 1,
+                                                textDecoration: 'none',
+                                                '&:hover': {
+                                                    color: 'red',
+                                                    backgroundColor: 'transparent',
+                                                },
+                                            }}
+                                        >
+                                            {page.label}
+                                        </Button>
                                     ))}
                                 </Stack>
                             </Box>
@@ -137,6 +138,7 @@ export default function Navbar(props) {
                 </Container>
             </HideOnScroll>
 
+            {/* Mobile Drawer */}
             {!isLargeScreen && (
                 <Drawer anchor="left" open={openDrawer} onClose={toggleDrawer(false)}>
                     {renderMenu}
