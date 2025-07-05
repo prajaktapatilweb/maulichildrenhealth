@@ -54,16 +54,14 @@ function Astheticheader() {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                // minHeight: { xs: '100vh', md: '80vh' },
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
+               
             }}
         >
+          
             <section style={{
                 background: '#e2a648',
                 width: '100%',
-                padding: '3px 0',
+                padding: 0, borderRadius: 0,
             }}>
                 <Container maxWidth="xl">
                     <Box
