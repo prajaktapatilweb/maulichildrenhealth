@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
     AppBar,
     Toolbar,
     IconButton,
-    Typography,
     Drawer,
     List,
     ListItem,
@@ -11,38 +10,28 @@ import {
     Collapse,
     useMediaQuery,
     Container,
-    Menu,
-    MenuItem,
     Button,
     Box,
     Stack,
-    Grid,
+    Menu,
+    MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { ExpandLess, ExpandMore, KeyboardArrowDown, KeyboardArrowRight } from "@mui/icons-material";
+import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Link from "next/link";
 import Image from "next/image";
 
-// const  = [
-//   { label: "Products" },
-//   { label: "Pricing" },
-//   { label: "Blog", subGroup: [{ label: "Item1" }, { label: "Item2" }, { label: "Item3" }] },
-//   { label: "Pricing" },
-// ];
 const navItems = [
     { linkID: "/astheticdental/#home", label: "Home" },
     { linkID: "/astheticdental/#aboutus", label: "About Us" },
     { linkID: "/astheticdental/#treatments", label: "Treatments" },
     { linkID: "/astheticdental/#Doctors", label: "Doctors" },
     { linkID: "/astheticdental/#gallery", label: "Gallery" },
-    // { linkID: "/#awards", label: "Awards" },
     { linkID: "/astheticdental/#testimonials", label: "Testimonials" },
     { linkID: "/astheticdental/#contactform", label: "Contact" },
 ];
-
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function HideOnScroll(props) {
     const { children, window } = props;
@@ -60,8 +49,8 @@ export default function Navbar(props) {
     const [openDrawer, setOpenDrawer] = useState(false);
     const [openSubMenu, setOpenSubMenu] = useState(false);
     const theme = useTheme();
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
     const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
+
     const toggleDrawer = (open) => () => {
         setOpenDrawer(open);
     };
@@ -71,15 +60,13 @@ export default function Navbar(props) {
     };
 
     const handleCloseNavMenu = () => {
-        setOpenDrawer(false)
-        setAnchorElNav(null);
+        setOpenDrawer(false);
     };
+
     const renderMenu = (
-        <List
-        // sx={{ width: 250 }}
-        >
+        <List>
             {navItems.map((item) => (
-                <>
+                <React.Fragment key={item.label}>
                     {item?.subGroup ? (
                         <>
                             <ListItem button onClick={handleSubMenuClick}>
@@ -89,8 +76,7 @@ export default function Navbar(props) {
                             <Collapse in={openSubMenu} timeout="auto" unmountOnExit>
                                 <List component="div" disablePadding>
                                     {item?.subGroup.map((item2) => (
-                                        <ListItem button sx={{ pl: 4 }}>
-
+                                        <ListItem button key={item2.label} sx={{ pl: 4 }}>
                                             <ListItemText primary={item2.label} />
                                         </ListItem>
                                     ))}
@@ -98,52 +84,20 @@ export default function Navbar(props) {
                             </Collapse>
                         </>
                     ) : (
-                        <Link
-
-                            href={item.linkID}
-                            sx={{
-                                fontWeight: 800,
-                                letterSpacing: ".1rem",
-                                color: "black",
-                                textDecoration: "none",
-                                textAlign: "center",
-                            }}
-                        >
+                        <Link href={item.linkID} passHref>
                             <Button
-                                key={item.label}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: "black", display: "block" }}>
+                                sx={{ my: 2, color: "black", display: "block", textTransform: 'initial', fontSize: '16px', letterSpacing: 1 }}
+                                component="a"
+                            >
                                 {item.label}
                             </Button>
                         </Link>
-                        // <ListItem button>
-
-                        //   <ListItemText primary={item.label} />
-
-                        // </ListItem>
-
                     )}
-                </>
+                </React.Fragment>
             ))}
         </List>
     );
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
-    const [flag, setFlag] = React.useState(false);
-
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
-
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
-    const handleOpenMobileSubMenu = () => {
-        // handleCloseNavMenu()
-        setFlag(!flag);
-    };
 
     return (
         <>
@@ -152,98 +106,68 @@ export default function Navbar(props) {
                     <Toolbar>
                         {!isLargeScreen && (
                             <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
-                                <MenuIcon  style={{color:'black'}}/>
+                                <MenuIcon style={{ color: 'black' }} />
                             </IconButton>
                         )}
-                        <Box sx={{flexGrow:1,textAlign:{xs:'right',sm:'right',md:'left',lg:'left'}}}>
- <Image src="/images/astheticlogo.jpg" width={90} height={80}></Image>
- </Box>
-                        {/* <Typography
-                            variant="h6"
-                            noWrap
-                            component="a"
-                            href="#app-bar-with-responsive-menu"
-                            sx={{
-                                mr: 2,
-                                fontFamily: "monospace",
-                                fontWeight: 700,
-                                letterSpacing: ".3rem",
-                                color: "inherit",
-                                textDecoration: "none",
-                                flexGrow: 1,
-                            }}>
-                            LOGO
-                        </Typography> */}
+
+                        <Box sx={{ flexGrow: 1, textAlign: { xs: 'right', sm: 'right', md: 'left', lg: 'left' } }}>
+                            <Image src="/images/astheticlogo.jpg" width={90} height={80} alt="Logo" />
+                        </Box>
+
                         {isLargeScreen && (
                             <Box sx={{ flexGrow: 0 }}>
                                 <Stack direction="row">
                                     {navItems.map((page) => (
-                                        <>
+                                        <React.Fragment key={page.label}>
                                             {page?.subGroup ? (
-                                                <Box sx={{ flexGrow: 0 }}>
-                                                    <Link
-                                                        key={i}
-                                                        href={page.linkID}
-                                                        sx={{
-                                                            fontWeight: 800,
-                                                            letterSpacing: ".1rem",
-                                                            color: "black",
-                                                            textDecoration: "none",
-                                                            textAlign: "center",
-                                                        }}
+                                                // Example: Dropdown Menu (you can expand this if needed)
+                                                <Box>
+                                                    <Button
+                                                        onClick={handleSubMenuClick}
+                                                        sx={{ mx: 1, color: "white", display: "block", textTransform: 'initial', fontSize: '16px', letterSpacing: 1 }}
                                                     >
-                                                        <Button
-                                                            key={page.label}
-                                                            onClick={handleOpenUserMenu}
-                                                            sx={{ my: 2, color: "white", display: "block" }}>
-
-                                                            {page.label}
-                                                        </Button>
-                                                    </Link>
+                                                        {page.label}
+                                                        {openSubMenu ? <ExpandLess /> : <ExpandMore />}
+                                                    </Button>
                                                     <Menu
                                                         sx={{ mt: "45px" }}
                                                         id="menu-appbar"
-                                                        anchorEl={anchorElUser}
                                                         anchorOrigin={{
                                                             vertical: "top",
                                                             horizontal: "right",
                                                         }}
-                                                        keepMounted
                                                         transformOrigin={{
                                                             vertical: "top",
                                                             horizontal: "right",
                                                         }}
-                                                        open={Boolean(anchorElUser)}
-                                                        onClose={handleCloseUserMenu}>
+                                                        open={openSubMenu}
+                                                        onClose={handleSubMenuClick}
+                                                    >
                                                         {page?.subGroup.map((setting) => (
-                                                            <MenuItem key={setting.label} onClick={handleCloseUserMenu}>
-                                                                <Typography textAlign="center">{setting.label}</Typography>
+                                                            <MenuItem key={setting.label} onClick={handleSubMenuClick}>
+                                                                {setting.label}
                                                             </MenuItem>
                                                         ))}
                                                     </Menu>
                                                 </Box>
                                             ) : (
-                                                <Link
-
-                                                    href={page.linkID}
-                                                  
-                                                >
+                                                <Link href={page.linkID} passHref>
                                                     <Button
-                                                        key={page.label}
                                                         onClick={handleCloseNavMenu}
-                                                        sx={{ mx: 1, color: "white", display: "block",textTransform:'initial',fontSize:'16px',letterSpacing:1 }}>
+                                                        sx={{ mx: 1, color: "white", display: "block", textTransform: 'initial', fontSize: '16px', letterSpacing: 1 }}
+                                                        component="a"
+                                                    >
                                                         {page.label}
                                                     </Button>
                                                 </Link>
                                             )}
-                                        </>
+                                        </React.Fragment>
                                     ))}
                                 </Stack>
                             </Box>
                         )}
                     </Toolbar>
                 </Container>
-
             </HideOnScroll>
 
             {!isLargeScreen && (
