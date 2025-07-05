@@ -23,7 +23,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navItems = [
-    { linkID: "/astheticdental/#home", label: "Home" },
+    { linkID: "/astheticdental", label: "Home" },
     { linkID: "/astheticdental/#aboutus", label: "About Us" },
     { linkID: "/astheticdental/#treatments", label: "Treatments" },
     { linkID: "/astheticdental/#Doctors", label: "Doctors" },
