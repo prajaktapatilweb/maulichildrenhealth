@@ -54,7 +54,7 @@ function Astheticheader() {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                minHeight: { xs: '100vh', md: '80vh' },
+                // minHeight: { xs: '100vh', md: '80vh' },
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
