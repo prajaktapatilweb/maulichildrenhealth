@@ -37,27 +37,27 @@ Aesthetic Dental Clinic in Kalamboli, Navi Mumbai, led by Dr. Sunita Taware (15+
               Site Links
             </Typography>
             <Typography variant="h5" sx={{ mb: 1 }}>
-              <Link href="/#" className="footermenu" style={{ color: '#c8b2a7' }}>
+              <Link href="/asthetic/#" className="footermenu" style={{ color: '#c8b2a7' }}>
                 Home
               </Link>
             </Typography>
             <Typography variant="h5" sx={{ mb: 1 }}>
-              <Link href="/#aboutus" className="footermenu" style={{ color: '#c8b2a7' }}>
+              <Link href="/astheticdental//#aboutus" className="footermenu" style={{ color: '#c8b2a7' }}>
                 About
               </Link>
             </Typography>
             <Typography variant="h5" sx={{ mb: 1 }}>
-              <Link href="/#treatments" className="footermenu" style={{ color: '#c8b2a7' }}>
+              <Link href="/astheticdental//#treatments" className="footermenu" style={{ color: '#c8b2a7' }}>
                 Treatments
               </Link>
             </Typography>
             <Typography variant="h5" sx={{ mb: 1 }}>
-              <Link href="/#testimonials" className="footermenu" style={{ color: '#c8b2a7' }}>
+              <Link href="/astheticdental//#testimonials" className="footermenu" style={{ color: '#c8b2a7' }}>
                 Testimonials
               </Link>
             </Typography>
             <Typography variant="h5" sx={{ mb: 1 }}>
-              <Link href="/#gallery" className="footermenu" style={{ color: '#c8b2a7' }}>
+              <Link href="/astheticdental/#gallery" className="footermenu" style={{ color: '#c8b2a7' }}>
                 Gallery
               </Link>
             </Typography>
