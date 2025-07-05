@@ -1,20 +1,29 @@
 import React, { useState } from "react";
-import { Toolbar, IconButton, Drawer, List, ListItem, useMediaQuery, Container, Button, Box, Stack } from "@mui/material";
+import {
+  Toolbar,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  useMediaQuery,
+  Container,
+  Button,
+  Box,
+  Stack,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
 
 const navItems = [
-  { id: "home", label: "Home" },
-  { id: "aboutus", label: "About Us" },
-  { id: "treatments", label: "Treatments" },
-  { id: "Doctors", label: "Doctors" },
-  { id: "gallery", label: "Gallery" },
-  { id: "testimonials", label: "Testimonials" },
-  { id: "contactform", label: "Contact" },
+  { link: "/astheticdental#home", label: "Home" },
+  { link: "/astheticdental#aboutus", label: "About Us" },
+  { link: "/astheticdental#treatments", label: "Treatments" },
+  { link: "/astheticdental#Doctors", label: "Doctors" },
+  { link: "/astheticdental#gallery", label: "Gallery" },
+  { link: "/astheticdental#testimonials", label: "Testimonials" },
+  { link: "/astheticdental#contactform", label: "Contact" },
 ];
 
 function HideOnScroll(props) {
@@ -31,47 +40,31 @@ function HideOnScroll(props) {
 export default function Navbar(props) {
   const [openDrawer, setOpenDrawer] = useState(false);
   const theme = useTheme();
-  const isLarge = useMediaQuery(theme.breakpoints.up("md"));
-  const router = useRouter();
-  const isOnPage = router.pathname === "/astheticdental";
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
 
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+  const toggleDrawer = (open) => () => {
+    setOpenDrawer(open);
   };
 
-  const handleClick = (id) => (e) => {
-    setOpenDrawer(false);
-    if (isOnPage) {
-      e.preventDefault();
-      scrollToSection(id);
-    } else {
-      router.push(`/astheticdental#${id}`);
-    }
-  };
-
-  const menu = (
+  const renderMenu = (
     <List>
-      {navItems.map(({ id, label }) => (
-        <ListItem key={id} disablePadding>
-          <Button
-            onClick={handleClick(id)}
-            sx={{
+      {navItems.map((item) => (
+        <ListItem key={item.label} disablePadding>
+          <a
+            href={item.link}
+            style={{
               width: "100%",
-              justifyContent: "flex-start",
-              px: 2,
+              padding: "8px 16px",
               color: "black",
-              textTransform: "initial",
-              fontSize: "16px",
-              letterSpacing: 1,
               textDecoration: "none",
-              "&:hover": { color: "red", backgroundColor: "transparent" },
+              fontSize: "16px",
+              display: "block",
+              textTransform: "initial",
             }}
+            onClick={() => setOpenDrawer(false)}
           >
-            {label}
-          </Button>
+            {item.label}
+          </a>
         </ListItem>
       ))}
     </List>
@@ -82,32 +75,31 @@ export default function Navbar(props) {
       <HideOnScroll {...props}>
         <Container>
           <Toolbar>
-            {!isLarge && (
-              <IconButton edge="start" onClick={() => setOpenDrawer(true)}>
-                <MenuIcon style={{ color: "#000" }} />
+            {!isLargeScreen && (
+              <IconButton edge="start" onClick={toggleDrawer(true)}>
+                <MenuIcon style={{ color: "black" }} />
               </IconButton>
             )}
-            <Box sx={{ flexGrow: 1, textAlign: isLarge ? "left" : "right" }}>
-              <Image src="/images/astheticlogo.jpg" alt="Logo" width={90} height={80} />
+            <Box sx={{ flexGrow: 1, textAlign: { xs: "right", md: "left" } }}>
+              <Image src="/images/astheticlogo.jpg" width={90} height={80} alt="Logo" />
             </Box>
-            {isLarge && (
+            {isLargeScreen && (
               <Stack direction="row">
-                {navItems.map(({ id, label }) => (
-                  <Button
-                    key={id}
-                    onClick={handleClick(id)}
-                    sx={{
-                      mx: 1,
-                      color: "#1e3081",
-                      textTransform: "initial",
-                      fontSize: "16px",
-                      letterSpacing: 1,
+                {navItems.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.link}
+                    style={{
+                      margin: "0 8px",
+                      color: "white",
                       textDecoration: "none",
-                      "&:hover": { color: "red", backgroundColor: "transparent" },
+                      fontSize: "16px",
+                      textTransform: "initial",
+                      letterSpacing: "1px",
                     }}
                   >
-                    {label}
-                  </Button>
+                    {item.label}
+                  </a>
                 ))}
               </Stack>
             )}
@@ -115,9 +107,9 @@ export default function Navbar(props) {
         </Container>
       </HideOnScroll>
 
-      {!isLarge && (
-        <Drawer anchor="left" open={openDrawer} onClose={() => setOpenDrawer(false)}>
-          {menu}
+      {!isLargeScreen && (
+        <Drawer anchor="left" open={openDrawer} onClose={toggleDrawer(false)}>
+          {renderMenu}
         </Drawer>
       )}
     </>
