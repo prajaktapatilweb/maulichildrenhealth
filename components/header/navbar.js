@@ -107,11 +107,24 @@ export default function Navbar(props) {
         </Container>
       </HideOnScroll>
 
-      {!isLargeScreen && (
+      {/* {!isLargeScreen && (
         <Drawer anchor="left" open={openDrawer} onClose={toggleDrawer(false)}>
           {renderMenu}
         </Drawer>
-      )}
+      )} */}
+
+      {!isLargeScreen && (
+  <Drawer
+    anchor="left"
+    open={openDrawer}
+    onClose={toggleDrawer(false)}
+    ModalProps={{
+      keepMounted: true,
+    }}
+  >
+    {renderMenu}
+  </Drawer>
+)}
     </>
   );
 }
