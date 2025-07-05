@@ -69,7 +69,7 @@ export default function Navbar(props) {
                             component={Link}
                             href={href}
                             onClick={handleCloseNavMenu}
-                            sx={{
+                            style={{
                                 my: 2,
                                 color: "black",
                                 display: "block",
@@ -120,7 +120,7 @@ export default function Navbar(props) {
                                                 component={Link}
                                                 href={href}
                                                 onClick={handleCloseNavMenu}
-                                                sx={{
+                                                style={{
                                                     mx: 1,
                                                     color: "#1e3081",
                                                     display: "block",
