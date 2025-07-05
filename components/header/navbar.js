@@ -5,25 +5,20 @@ import {
     Drawer,
     List,
     ListItem,
-    ListItemText,
-    Collapse,
     useMediaQuery,
     Container,
-    Menu,
-    MenuItem,
     Button,
     Box,
     Stack,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Link from "next/link";
 import Image from "next/image";
 
 const navItems = [
-    { linkID: "/astheticdental", label: "Home" },
+    { linkID: "/astheticdental/#home", label: "Home" },
     { linkID: "/astheticdental/#aboutus", label: "About Us" },
     { linkID: "/astheticdental/#treatments", label: "Treatments" },
     { linkID: "/astheticdental/#Doctors", label: "Doctors" },
@@ -57,7 +52,7 @@ export default function Navbar(props) {
         setOpenDrawer(false);
     };
 
-    // Mobile Menu Renderer
+    // ✅ Mobile Menu Renderer
     const renderMenu = (
         <List>
             {navItems.map((item) => (
@@ -92,19 +87,19 @@ export default function Navbar(props) {
             <HideOnScroll {...props}>
                 <Container>
                     <Toolbar>
-                        {/* Mobile Menu Button */}
+                        {/* ✅ Mobile Menu Icon */}
                         {!isLargeScreen && (
                             <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
                                 <MenuIcon style={{ color: 'black' }} />
                             </IconButton>
                         )}
 
-                        {/* Logo */}
+                        {/* ✅ Logo */}
                         <Box sx={{ flexGrow: 1, textAlign: { xs: 'right', sm: 'right', md: 'left', lg: 'left' } }}>
                             <Image src="/images/astheticlogo.jpg" width={90} height={80} alt="Logo" />
                         </Box>
 
-                        {/* Desktop Menu */}
+                        {/* ✅ Desktop Menu */}
                         {isLargeScreen && (
                             <Box sx={{ flexGrow: 0 }}>
                                 <Stack direction="row">
@@ -138,7 +133,7 @@ export default function Navbar(props) {
                 </Container>
             </HideOnScroll>
 
-            {/* Mobile Drawer */}
+            {/* ✅ Mobile Drawer */}
             {!isLargeScreen && (
                 <Drawer anchor="left" open={openDrawer} onClose={toggleDrawer(false)}>
                     {renderMenu}
